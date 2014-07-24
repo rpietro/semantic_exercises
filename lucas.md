@@ -1,6 +1,6 @@
 # Semi-automatic generation of clinical case exercises based on Clinical Practice Guidelines using semantic representation
 
-Lucas O. Teixeira
+Lucas O. Teixeira  
 João Ricardo Vissoci  
 Bruno Melo  
 Ricardo Pietrobon
@@ -10,14 +10,12 @@ Ricardo Pietrobon
 
 ## Introduction
 
-Although Clinical Practice Guidelines were designed with the intent of disseminating the best available evidence to healthcare professionals
+Although Clinical Practice Guidelines were designed with the intent of disseminating the best available evidence to healthcare professionals, they are delivered in a format that is informative rather than educational. It is therefore no surprise that adherence to clinical practice guidelines have been reported to be poor <!-- ref -->, ultimately decreasing the benefit that would arise from the best available evidence being applied to patients. To our knowledge, however, there have been no previous attempts to automatically convert Clinical Practice Guidelines to a format that would be directly applicable to a learning environment.
 
- the widespread use of electronic medical records around the world, an unprecedented opportunity is presented to connect the best available evidence at the point of care. This opportunity is not without challenges, however, some of the most important ones being represented by most electronic medical records being based on free text rather than discrete fields, as well as the lack of semantic connection between the text categories and the corresponding Clinical Practice Guidelines. To our knowledge these two challenges have not been addressed up to this point.
-
-* lit review NLP applied to concept discovery in electronic medical records
+* lit review education applied to Clinical Practice Guidelines
 * lit review of semantic representation of Clinical Practice Guidelines
 
-The objective of this article is therefore to present the structure and results of a novel methodology using natural language processing to abstract concepts from a psychiatric electronic medical record, and then connecting them to the content of Clinical Practice Guidelines focused on Mental Health semantically encoded as [JSON-LD](http://www.w3.org/TR/json-ld/), thus providing a decision-suport framework. The architecture and multiple validation cases are presented.
+The objective of this article is therefore to present the structure and results of a novel methodology using a semantic representation of Clinical Practice Guidelines, which is then semi-automatically deployed to clinical case exercises deployable to the [open edX]() learning management system. The architecture and multiple validation cases are presented.
 
 
 
