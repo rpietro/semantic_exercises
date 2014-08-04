@@ -22,25 +22,94 @@ The objective of this article is therefore to present the structure and results 
 
 ## Methods
 
-## Electronic medical record data
+### Source of Clinical Practice Guidelines
 
-* describe data
-* sample of something like 1000 records
+* [National Guideline Clearinghouse](http://www.guideline.gov/) using guidelines focused on Mental Health
+* 3 guidelines:
 
-## Natural language processing applied to electronic medical record data
 
-* Concept extraction related to diagnosis, signs and symptoms 
+### Use case
 
-## Semantic encoding of Clinical Practice Guidelines using JSON-LD
-* executive summaries of 10 selected Clinical Practice Guidelines encoded as JSON-LD by trained healthcare professionals
-* most common conditions selected
 
-## Golden standard dataset connecting raw electronic medical record data to full-text Clinical Practice Guidelines
+#### Diagnosis
 
-* two healthcare professionals connecting a sample of 100 patient record data to the respective Clinical Practice Guidelines
-* observer agreement data
+Patient is a {{male}}, {{28}} years old, comes to the {{office}}, {{no family support}}. with symptoms of {{crying often}}, {{not being able to sleep at night}} and {{suicidal thinking}}. The most likely diagnosis is:
 
-## Random forest algorithms predicting which medical records should be connected to which Clinical Practice Guidelines
+( ) {{anxiety}}
+(x) {{major depression}}
+( ) {{obsessive compulsive disorder}}
 
-* start with simple algorithms simply connecting diagnoses with Clinical Practice Guidelines
-* evolve into further granularity where additional information from medical records allow for connection to more specific sections of each Clinical Practice Guideline
+[explanation]
+The {{diagnostic criteria}} for {{major depression}} according to {{DSM-V}} are symptoms of {{crying often}}, {{not being able to sleep at night}} and {{suicidal thinking}}. Signs might include {{}}. Laboratory results might include {{}}. Imaging results might include {{}}
+[explanation]
+
+
+
+
+### Evidence-based facts extraction
+
+* two healthcare researchers
+* use of executive summary 
+* statement example
+* observer agreement
+
+JSON (not in a JSON-LD format)
+
+[
+{
+    "eb-fact" : "",
+    "source" : {
+        "reference" : "",
+        "hyperlink" : "",
+        "publication_date" : ""
+        },
+        "classification" : {
+            "diagnosis_cat" : [""],
+            "treatment_cat" : [""],
+        }
+    }
+
+    ]
+
+
+
+### Item ou exercise structure
+
+In order to create our items (the psychometric term for exercises), we have assumed a fixed structure for its stem, alternative options and feedback structure.
+
+#### Stem
+
+The stem might have three components
+
+* Situational information such as patient socio-demographic and social support characteristics
+    * "Patient is a {{male}}, {{26}} years old, coming to the {{Emergency Room}} because of" 
+    * Variables
+        * "gender" : ["male", "female"]
+        *  "age" : ""
+        *  "visit_setting" : ["Emergency Room", "office"]
+    * Some of the variable might or might not influence the choice of an alternative option. The ones that do not can vary randomly within a certain range
+* Patient characteristics that are connected to the decision regarding Clinical Practice Guideline
+    * symptoms
+    * signs
+    * laboratory_results
+    * imaging_results
+    * response to treatment
+* 
+
+
+
+
+#### Alternative options
+
+
+#### Feedback
+
+Feedback is composed by the 
+
+### Semantic encoding of Clinical Practice Guidelines using JSON-LD
+
+
+
+## Results
+
+## Discussion
