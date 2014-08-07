@@ -44,6 +44,19 @@ The {{diagnostic criteria}} for {{major depression}} according to {{DSM-V}} are 
 [explanation]
 
 
+#### Treatment
+
+Patient is a {{female}}, {{34}} years old, comes to the {{office}}. She presents {{good family support}}. A diagnosis of mild depression is established. The least agreessive treatment and yet recognized as being effective in multiple Clinical Practice Guidelines is:
+
+( ) {{ECT}}
+(x) {{isolated psychotherapy}}
+( ) {{psychotherapy and tricyclic antidepressants}}
+
+[explanation]
+Mild and moderate depression have been demonstrated to be effectively treated with isolated psychotherapy
+[explanation]
+
+
 
 
 ### Evidence-based facts extraction
@@ -104,9 +117,12 @@ The stem might have three components
 
 #### Feedback
 
-Feedback is composed by the 
+Feedback is composed by the full evidence-based fact
 
 ### Semantic encoding of Clinical Practice Guidelines using JSON-LD
+
+<!-- idea is to build the ontology from the use case -->
+
 
 
 
