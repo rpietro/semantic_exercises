@@ -1,33 +1,81 @@
 {
 	"@context":
 	{
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
 		"disease": 
 		{
 			"@id": "http://schema.org/MedicalCondition",
-			"@type": "@id"
+			"@type": "xsd:string"
+		},
+        "symptom": 
+		{
+			"@id": "http://schema.org/name",
+			"@type": "xsd:string"
 		},
 		"symptoms":
-		{	
+		{
 			"@id": "http://schema.org/MedicalSignOrSymptom",
-			"@container": "@set"	
-		},
-		"optionalSymptoms": 
-		{	
-			"@id": "http://schema.org/MedicalSignOrSymptom",
-			"@container": "@set"	
+			"@type": "@id",
+			"@container": "@set"
 		}
 	},
 	"@graph": 
 	[
 		{
-			"@id": "Major Depression",
+			"@id": "CryingOften",
+            "symptom": "Crying Often"
+		},
+		{
+			"@id": "SuicidalThinking",
+            "symptom": "Suicidal Thinking"
+		},
+		{
+			"@id": "Insomnia",
+            "symptom": "Insomnia"
+		},
+		{
+			"@id": "Fever",
+            "symptom": "Fever"
+		},
+		{
+			"@id": "Headache",
+            "symptom": "Headache"
+		},
+		{
+			"@id": "SoreThroat",
+            "symptom": "Sore Throat"
+		},
+		{
+			"@id": "MajorDepression",
 			"disease": "Major Depression",
-			"symptoms": [ "crying often", "not being able to sleep at night", "suicidal thinking"]
+			"symptoms": 
+			[ 	
+				{
+					"@id": "CryingOften"
+				},
+                {
+					"@id": "SuicidalThinking"
+				},
+				{
+					"@id": "Insomnia"
+				}
+			]
 		},
 		{
 			"@id": "Flu",
 			"disease": "Flu",
-			"symptoms": [ "fever", "sore throat", "headache"]
+			"symptoms": 
+			[ 	
+				{
+					"@id": "Fever"
+				},
+                {
+					"@id": "Headache"
+				},
+				{
+					"@id": "SoreThroat"
+				}
+			]
 		}
 	]
 }
