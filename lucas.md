@@ -12,8 +12,13 @@ Ricardo Pietrobon
 
 Although Clinical Practice Guidelines were designed with the intent of disseminating the best available evidence to healthcare professionals, they are delivered in a format that is informative rather than educational. It is therefore no surprise that adherence to clinical practice guidelines have been reported to be poor <!-- ref -->, ultimately decreasing the benefit that would arise from the best available evidence being applied to patients. To our knowledge, however, there have been no previous attempts to automatically convert Clinical Practice Guidelines to a format that would be directly applicable to a learning environment.
 
-* lit review education applied to Clinical Practice Guidelines
-* lit review of semantic representation of Clinical Practice Guidelines
+Although a vast amount of literature has been published on the definition of diagnostic criteria for an array of conditions, very little has been published on methods to enhance the learning of these same criteria by healthcare professionals. And yet, there is a substantial amount of literature demonstrating a large degree of disagreement among authors when it comes to the diagnosis of individual cases ([Williams, 2006](http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2133.1994.tb08531.x/abstract); [Reid, 1988](http://www.sciencedirect.com/science/article/pii/S0046817788803447), [Baldereschi, 1994](http://www.neurology.org/content/44/2/239.short)).
+
+* lit review of semantic representation of diagnostic criteria 
+    * ([Mugzach](http://mis.hevra.haifa.ac.il/~morpeleg/pubs/H35.pdf))
+    * ([Ceusters, 2010](http://www.biomedcentral.com/content/pdf/2041-1480-1-10.pdf))
+    * ([Samson, 2008](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2655950/))
+    * 
 
 We chose to use the JSON-LD format for the semantic representation of Clinical Practice Guidelines because it is a very lightweight format, strongly based on JSON and it is as representative as RDF and OWL. Moreover, we adopted the Dublin Core Metadata Standard with Medical Subject Headings controlled vocabulary [Check the possibility of using MEDDRA] in order to standardized our semantic representation allowing others to use it. 
 
@@ -24,10 +29,9 @@ The objective of this article is therefore to present the structure and results 
 
 ## Methods
 
-### Source of Clinical Practice Guidelines
+### Source of diagnostic criteria
 
-* [National Guideline Clearinghouse](http://www.guideline.gov/) using guidelines focused on Mental Health
-* 3 guidelines:
+For this article we used the diagnostic criteria for [major depression]() <!-- Lucas, please add --> and [schizophrenia](http://ccpweb.wustl.edu/pdfs/2013_defdes.pdf) as established by the [Fifth Edition of the Diagnostic and Statistical Manual of Mental Disorders (DSM-5)](http://www.dsm5.org/Pages/Default.aspx) as well as the criteria for rheumatoid arthritis and [polymyalgia rheumatica](http://www.rheumatology.org/ACR/practice/clinical/classification/jra/FINAL_PMR_Class_Criteria_paper.pdf) as established by the [American College of Rheumatology](http://www.rheumatology.org/Practice/Clinical/Classification/Classification_Criteria_for_Rheumatic_Diseases/)
 
 
 ### Use case
