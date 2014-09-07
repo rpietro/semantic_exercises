@@ -8,21 +8,15 @@ Ricardo Pietrobon
 ## Abstract
 
 
+<!-- write at the end -->
+
 ## Introduction
 
 Although Clinical Practice Guidelines were designed with the intent of disseminating the best available evidence to healthcare professionals, they are delivered in a format that is informative rather than educational. It is therefore no surprise that adherence to clinical practice guidelines have been reported to be poor <!-- ref -->, ultimately decreasing the benefit that would arise from the best available evidence being applied to patients. To our knowledge, however, there have been no previous attempts to automatically convert Clinical Practice Guidelines to a format that would be directly applicable to a learning environment.
 
 Although a vast amount of literature has been published on the definition of diagnostic criteria for an array of conditions, very little has been published on methods to enhance the learning of these same criteria by healthcare professionals. And yet, there is a substantial amount of literature demonstrating a large degree of disagreement among authors when it comes to the diagnosis of individual cases ([Williams, 2006](http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2133.1994.tb08531.x/abstract); [Reid, 1988](http://www.sciencedirect.com/science/article/pii/S0046817788803447), [Baldereschi, 1994](http://www.neurology.org/content/44/2/239.short)), which can be interpreted as a lack of healthcare educational resources to better train healthcare professionals.
 
-The semantic representation of diagnostic criteria has been explored in 
-* lit review of semantic representation of diagnostic criteria 
-    * ([Mugzach](http://mis.hevra.haifa.ac.il/~morpeleg/pubs/H35.pdf))
-    * ([Ceusters, 2010](http://www.biomedcentral.com/content/pdf/2041-1480-1-10.pdf))
-    * ([Samson, 2008](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2655950/))
-    * [](http://informahealthcare.com/doi/abs/10.3109/17538157.2011.590258)
-    * [](http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2842.2011.02247.x/abstract;jsessionid=78DD041A12508901281545F3A2C25E5D.f03t01?deniedAccessCustomisedMessage=&userIsAuthenticated=false)
-    * [](http://www.sciencedirect.com/science/article/pii/S0010482505000776)
-    * [](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041577/)
+Although the semantic representation of diagnostic criteria has been explored in a number of publications, the use cases they address are all but homogeneous. For example, some ontologies have aimed at decision support by making diagnoses based on electronic medical records ([Mugzach](http://mis.hevra.haifa.ac.il/~morpeleg/pubs/H35.pdf); [Bertaud-Gounot, 2012](http://informahealthcare.com/doi/abs/10.3109/17538157.2011.590258); [Nixdorg, 2011](http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2842.2011.02247.x/abstract;jsessionid=78DD041A12508901281545F3A2C25E5D.f03t01?deniedAccessCustomisedMessage=&userIsAuthenticated=false)), provide a framework to establish conformance with the Basic Formal Ontology ([Ceusters, 2010](http://www.biomedcentral.com/content/pdf/2041-1480-1-10.pdf)), augment existing ontologies with additional vocabulary ([Samson, 2008](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2655950/)), establish semantic similarity within an existing ontology [(Steichen, 2006)](http://www.sciencedirect.com/science/article/pii/S0010482505000776), establish general guidelines for ontology development in diagnosis [(Scheuermann, 2009)](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041577/)
     * [](http://iospress.metapress.com/content/40jwuthjykf9rrjp/)
     * [](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=79706&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D79706)
     * [](http://www.sciencedirect.com/science/article/pii/S157082680600014X)
