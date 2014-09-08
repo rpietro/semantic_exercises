@@ -1,9 +1,0 @@
-PREFIX : <http://diseasesdiagnosis.com/>
-PREFIX schema: <http://schema.org/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-SELECT ?diseaseName
-WHERE
-{
-    ?disease rdf:type schema:MedicalCondition .
-    ?disease schema:name ?diseaseName .
-}

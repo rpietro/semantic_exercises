@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://www.daml.org/2001/03/daml+oil" uri="www.daml.org/2001/03/daml_oil.xml"/>
+    <system systemId="http://protege.stanford.edu/plugins/owl/protege" uri="protege.stanford.edu/plugins/owl/protege.xml"/>
+    <system systemId="http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl"/>
+    <system systemId="http://www.w3.org/1999/02/22-rdf-syntax-ns" uri="www.w3.org/1999/02/22-rdf-syntax-ns"/>
+    <system systemId="http://www.w3.org/2002/07/owl" uri="www.w3.org/2002/07/owl"/>
+    <system systemId="http://www.owl-ontologies.com/2005/08/07/xsp.owl" uri="www.owl-ontologies.com/2005/08/07/xsp.owl"/>
+    <system systemId="http://www.w3.org/2003/11/swrlb" uri="www.w3.org/2003/11/swrlb.xml"/>
+    <system systemId="http://www.w3.org/2003/11/swrl" uri="www.w3.org/2003/11/swrl.xml"/>
+    <system systemId="http://www.w3.org/2000/01/rdf-schema" uri="www.w3.org/2000/01/rdf-schema"/>
+    <system systemId="http://purl.org/dc/elements/1.1/" uri="dublincore.org/2012/06/14/dcelements"/>
+</catalog>
