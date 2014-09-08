@@ -16,12 +16,21 @@ Although Clinical Practice Guidelines were designed with the intent of dissemina
 
 Although a vast amount of literature has been published on the definition of diagnostic criteria for an array of conditions, very little has been published on methods to enhance the learning of these same criteria by healthcare professionals. And yet, there is a substantial amount of literature demonstrating a large degree of disagreement among authors when it comes to the diagnosis of individual cases ([Williams, 2006](http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2133.1994.tb08531.x/abstract); [Reid, 1988](http://www.sciencedirect.com/science/article/pii/S0046817788803447), [Baldereschi, 1994](http://www.neurology.org/content/44/2/239.short)), which can be interpreted as a lack of healthcare educational resources to better train healthcare professionals.
 
-Although the semantic representation of diagnostic criteria has been explored in a number of publications, the use cases they address are all but homogeneous. For example, some ontologies have aimed at decision support by making diagnoses based on electronic medical records ([Mugzach](http://mis.hevra.haifa.ac.il/~morpeleg/pubs/H35.pdf); [Bertaud-Gounot, 2012](http://informahealthcare.com/doi/abs/10.3109/17538157.2011.590258); [Nixdorg, 2011](http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2842.2011.02247.x/abstract;jsessionid=78DD041A12508901281545F3A2C25E5D.f03t01?deniedAccessCustomisedMessage=&userIsAuthenticated=false)), provide a framework to establish conformance with the Basic Formal Ontology ([Ceusters, 2010](http://www.biomedcentral.com/content/pdf/2041-1480-1-10.pdf)), augment existing ontologies with additional vocabulary ([Samson, 2008](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2655950/)), establish semantic similarity within an existing ontology [(Steichen, 2006)](http://www.sciencedirect.com/science/article/pii/S0010482505000776), establish general guidelines for ontology development in diagnosis [(Scheuermann, 2009)](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041577/)
-    * [](http://iospress.metapress.com/content/40jwuthjykf9rrjp/)
-    * [](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=79706&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D79706)
-    * [](http://www.sciencedirect.com/science/article/pii/S157082680600014X)
+Although the semantic representation of diagnostic criteria has been explored in a number of publications, the use cases they address are all but homogeneous. For example, some ontologies have aimed at decision support by making diagnoses based on electronic medical records ([Mugzach](http://mis.hevra.haifa.ac.il/~morpeleg/pubs/H35.pdf); [Bertaud-Gounot, 2012](http://informahealthcare.com/doi/abs/10.3109/17538157.2011.590258); [Nixdorg, 2011](http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2842.2011.02247.x/abstract;jsessionid=78DD041A12508901281545F3A2C25E5D.f03t01?deniedAccessCustomisedMessage=&userIsAuthenticated=false)), provide a framework to establish conformance with the Basic Formal Ontology ([Ceusters, 2010](http://www.biomedcentral.com/content/pdf/2041-1480-1-10.pdf); [Ceusters, 2006](http://www.sciencedirect.com/science/article/pii/S157082680600014X)), augment existing ontologies with additional vocabulary ([Samson, 2008](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2655950/)), establish semantic similarity within an existing ontology ([Steichen, 2006](http://www.sciencedirect.com/science/article/pii/S0010482505000776)) or to establish general guidelines for ontology development related to medical diagnosis [Scheuermann, 2009](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041577/); [Burgun, 2005](http://iospress.metapress.com/content/40jwuthjykf9rrjp/);[Abu-Hanna, 1991](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=79706&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D79706)). Despite all of these models, to our knowledge no previous attempt has been made to model diagnosis so that the ontologies could provide the basis for Automatic Item Generation ([Gierl, 2012](http://www.amazon.com/Automatic-Item-Generation-Theory-Practice-ebook/dp/B00979KH6C/ref=tmm_kin_title_0?_encoding=UTF8&sr=8-1&qid=1410142729))<!-- ref -->, or the ability to generate a very large exercises of exercises based on a model.
 
-We chose to use the JSON-LD format for the semantic representation of Clinical Practice Guidelines because it is a very lightweight format, strongly based on JSON and it is as representative as RDF and OWL. Moreover, we adopted the Dublin Core Metadata Standard with Medical Subject Headings controlled vocabulary [Check the possibility of using MEDDRA] in order to standardized our semantic representation allowing others to use it. 
+<!-- review AIG and then criticize for not being semantic
+
+[Lai, 2009](http://www.psych.umn.edu/psylabs/catcentral/pdf%20files/cat09lai.pdf)
+[Embretson, 2006](http://www.sciencedirect.com/science/article/pii/S0169716106260231)
+[Gierl, 2008](http://www.taotesting.com/advances-automatic-item-generation-and-demonstration)
+[Zhongquan, 2008](http://118.145.16.229:81/Jweb_xlkxjz/EN/abstract/abstract2407.shtml)
+[Gierl, 2012](http://www.ualberta.ca/~mgierl/files/published-papers/ijt%20item%20models%202012.pdf)
+
+ -->
+
+     
+
+<!-- We chose to use the JSON-LD format for the semantic representation of Clinical Practice Guidelines because it is a very lightweight format, strongly based on JSON and it is as representative as RDF and OWL. Moreover, we adopted the Dublin Core Metadata Standard with Medical Subject Headings controlled vocabulary [Check the possibility of using MEDDRA] in order to standardized our semantic representation allowing others to use it.  -->
 
 The objective of this article is therefore to present the structure and results of a novel methodology using a semantic representation of diagnostic criteria, which are then semi-automatically deployed to clinical case exercises deployable to the [open edX](http://code.edx.org/) learning management system. The architecture and four validation cases are presented.
 
@@ -44,6 +53,11 @@ For this article we used the diagnostic criteria for [major depression]() <!-- L
 
 We followed the main principles of [Unified Process for ONtology (UPON)](https://docs.google.com/file/d/0B4Ke-17mTW1_eWZpeUNRa2pUVVE/edit) during the ontology development, with LOT serving as the ontology engineer and RP and GM serving as content experts for, respectively, the musculoskeletal and mental health fields. 
 
+Two healthcare (RP and GM) researchers selected the four documents containing the diagnostic criteria. There was no intention to make these cases to be representative of all conditions. The ontology was then created in conjunction between the ontology engineer (LOT) and the two healthcare researchers. Following the UPON ontology engineering approach, the experts iterated to ensure that the ontology adequately provided an accurate representation of the diagnostic criteria, that its query provided the components necessary to automatically generate itens, and that the two healthcare experts agreed that the items provided an adequate way to assess diagnostic criteria.
+
+<!-- observer agreement -->
+
+
 
 ### Informal use case
 
@@ -55,7 +69,7 @@ The ontology development was primarily based on the following informal use case:
     * Queries should result in responses that can be used to instantiate the template
     * The ontology accurately represents the diagnostic criteria
 
-Given that we followed an UPON ontology engineering methodology, these three steps were cycled until the ontology reached the status described in this manuscript.
+Given that we followed an UPON ontology engineering approach, these three steps were cycled until the ontology reached the status described in this manuscript.
 
 Table 1. Clinical case exercise and corresponding template
 
@@ -68,15 +82,6 @@ Table 1. Clinical case exercise and corresponding template
 [A small paragraph explaining JSON-LD, Dublin Core and MeSH and the reason that we used it]
 
 First of all, it is important to state that the ontology was developed primarily to satisfy the use cases described above and that no future requirement was taken into account. The previous assumption allowed our ontology to be very simple and still achieved its objective.
-
-
-
-### Evidence-based facts extraction
-
-* two healthcare researchers
-* use of executive summary 
-* statement example
-* observer agreement
 
 
 
