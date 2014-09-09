@@ -1,4 +1,4 @@
-# Semi-automatic generation of clinical case exercises based on Clinical Practice Guidelines using semantic representation
+# Semantic, semi-automatic generation of clinical case exercises based on diagnostic criteria
 
 Lucas O. Teixeira  
 João Ricardo Vissoci  
@@ -38,15 +38,19 @@ The objective of this article is therefore to present the structure and results 
 
 
 ## Methods
-
-
 ### Ethics
 
 Since this project did not involve subjects and the data also did not refer to participants, it was considered exempt from review on an Institutional Review Board. 
 
+
+
+
 ### Source of diagnostic criteria
 
 For this article we used the diagnostic criteria for [major depression]() <!-- Lucas, please add --> and [schizophrenia](http://ccpweb.wustl.edu/pdfs/2013_defdes.pdf) as established by the [Fifth Edition of the Diagnostic and Statistical Manual of Mental Disorders (DSM-5)](http://www.dsm5.org/Pages/Default.aspx) as well as the criteria for rheumatoid arthritis and [polymyalgia rheumatica](http://www.rheumatology.org/ACR/practice/clinical/classification/jra/FINAL_PMR_Class_Criteria_paper.pdf) as established by the [American College of Rheumatology](http://www.rheumatology.org/Practice/Clinical/Classification/Classification_Criteria_for_Rheumatic_Diseases/).
+
+
+
 
 ### Ontology engineering methodology
 
@@ -77,21 +81,16 @@ Table 1. Clinical case exercise and corresponding template
 
 <!-- add one template and one instantiated exercise -->
 
-#### Semantic Representation Design
-
-[A small paragraph explaining JSON-LD, Dublin Core and MeSH and the reason that we used it]
-
-First of all, it is important to state that the ontology was developed primarily to satisfy the use cases described above and that no future requirement was taken into account. The previous assumption allowed our ontology to be very simple and still achieved its objective.
 
 
 
-### Item ou exercise structure
+### Item model
 
 In order to create our items (the psychometric term for exercises), we have assumed a fixed structure for its stem, alternative options and feedback structure.
 
-#### Stem
+#### Item stem
 
-The stem might have three components
+The stem has three components
 
 * Situational information such as patient socio-demographic and social support characteristics
     * "Patient is a {{male}}, {{26}} years old, coming to the {{Emergency Room}} because of" 
@@ -111,26 +110,31 @@ The stem might have three components
 
 
 
-#### Alternative options
+#### Item alternative options
 
 
-#### Feedback
+#### Item feedback
 
 Feedback is composed by the full evidence-based fact
 
-### Semantic encoding of Clinical Practice Guidelines using JSON-LD
+### Ontology structure
 
-<!-- idea is to build the ontology from the use case -->
+<!-- Lucas, let's come up with a graphical representation of the ontology in graphviz or something. The JSON-LD serialization can then be represented in a separate file within the github repo.  -->
+
+#### Classes
+
+
+#### Properties
+
+
+#### Query, inferences and model instantiation
+
 
 
 
 
 ## Results
-
-
-
-### Ontology structure
-<!-- Lucas, let's come up with a graphical representation of the ontology in graphviz or something. The JSON-LD serialization can then be represented in a separate file within the github repo.  -->
+### Query results
 
 http://dublincore.org/documents/dcq-rdf-xml/
 
@@ -263,8 +267,6 @@ http://dublincore.org/documents/dcq-rdf-xml/
 }
 
 
-### Querying and inference
-
 SPARQL Query:
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -325,8 +327,9 @@ WHERE
 GROUP BY ?diseaseName ?quantityOfOptionalSymptoms HAVING ( COUNT(?optionalSymptom) >= ?quantityOfOptionalSymptoms )
 ORDER BY COUNT(?optionalSymptom)
 
-### Template instantiation
+### Application results
 
-<!-- Lucas what would you suggest as the simplest possible form of an app for this? a CLI? -->
 
 ## Discussion
+
+
