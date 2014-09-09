@@ -1,4 +1,4 @@
-# Semantic, semi-automatic generation of clinical case exercises based on diagnostic criteria
+# Semantic automatic generation of clinical case exercises focused on diagnostic criteria
 
 Lucas O. Teixeira  
 João Ricardo Vissoci  
@@ -332,4 +332,13 @@ ORDER BY COUNT(?optionalSymptom)
 
 ## Discussion
 
+To the best of our knowledge, this is the first description of a semantic automated item generation framework. We have found that semantic models of common mental health and rheumatologic conditions can be used to generate a large number of reliable clinical case items (exercises). 
 
+* Previous literature on automatic generation and limitations of the non-semantic approach.
+	* Advantages to our approach include the ability to model a larger range of item restrictions, in a way that would be difficult or impossible using traditional automatic item generation techniques. Second, since we can include a progressive number of natural language variations in our models, the number of resulting items is almost limitless. The larger number of items not only substantially reduces the cost of item generation, but also improves the security of the resulting item banks. In other words, if individuals undergoing a given test cannot predict which instance of an item model they will be presented with, then they cannot memorize that item and their response is more likely to represent their current ability.
+* Previous use of semantic modeling and differences in relation to our modeling approach
+
+
+Although our study brings a novel approach to the automatic generation of educational items, it does have limitations. First, we have not validated it against a wider range of clinical areas, which might pose different modeling challenges not anticipated by our current model. As a consequence, future models might not be back compatible. Second, our model currently does not apply to treatment in general, and more specifically to Clinical Practice Guidelines. Clinical Practice Guidelines are an essential part in the translation of the best available evidence to the daily healthcare practice, but their addition imposes a number of additional challenges such as the inclusion of treatment vocabularies as well as the treatment of a "situational interpretation" in treatment choice. For example, a given treatment might be applicable to a young patients whereas it might not on an elderly individual.
+
+Based on the previously stated limitations, future research should focus on the expansion of our model to clinical treatment and the inclusion of a situations as a way to introduce a more nuanced level of detail to our items. Although this is, to our knowledge, the first report of a semantic automatic generation approach to clinical case exercises, we believe that its inclusion into existing learning management systems such as the [Open edX](http://code.edx.org/) platform will bring advantages to both learners and instructors.
