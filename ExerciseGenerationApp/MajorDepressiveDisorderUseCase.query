@@ -19,34 +19,31 @@ WHERE
 	?meshDisease rdfs:label "Depressive Disorder, Major" .
 
 	{
-
-        SELECT * WHERE
-
+        SELECT ?diseaseSymptom ?symptomName WHERE
         {
 
-            ?disease ns:optionalSymptoms ?optionalDiseaseSymptom .
-            ?optionalDiseaseSymptom dc:subject ?meshOptionalSymptom .
+            ?disease ns:optionalSymptoms ?diseaseSymptom .
+            ?diseaseSymptom dc:subject ?meshOptionalSymptom .
             ?meshOptionalSymptom rdf:value ?optionalSymptomID .
             ?meshOptionalSymptom rdfs:label ?symptomName .
-            ?optionalDiseaseSymptom dc:description ?symptomDescription .
-
-            ?disease ns:minimumQuantityOfOptionalSymptoms ?quantityOfOptionalSymptoms .
-
-        }
-
-       LIMIT 3
-
+        } LIMIT <!-numOfOptionalSymptoms-!>
 	} 
 	
 	UNION
 	
 	{
+		SELECT ?diseaseSymptom ?symptomName WHERE
+		{
 	
-		?disease ns:mandatorySymptoms ?mandatoryDiseaseSymptom .
-		?mandatoryDiseaseSymptom dc:subject ?meshMandatorySymptom .
-		?meshMandatorySymptom rdf:value ?mandatorySymptomID .
-		?meshMandatorySymptom rdfs:label ?symptomName .
-		?mandatoryDiseaseSymptom dc:description ?symptomDescription .
-		
+			?disease ns:mandatorySymptoms ?diseaseSymptom .
+			?diseaseSymptom dc:subject ?meshMandatorySymptom .
+			?meshMandatorySymptom rdf:value ?mandatorySymptomID .
+			?meshMandatorySymptom rdfs:label ?symptomName .
+		} LIMIT <!-numOfMandatorySymptoms-!>
 	}
-} 
+
+	?diseaseSymptom dc:description ?symptomDescription .
+
+}
+
+GROUP BY ?symptomName

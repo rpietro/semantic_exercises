@@ -27,7 +27,6 @@
 		{
 			"@id": "ns:F03.600.300.375",
 			"@type": "ns:C23.550.288",
-			"ns:minimumQuantityOfOptionalSymptoms": 4,
 			"dc:subject": 
 			{
 				"@id": "dcterms:MESH/F03.600.300.375",
@@ -47,7 +46,10 @@
 					},
 					"dc:description": 
 					[
-						"depressed mood"
+						"depressed mood",
+						"sadness",
+						"hopeless",
+						"irritable mood"
 					]
 				},
 				{
@@ -60,7 +62,8 @@
 					},
 					"dc:description": 
 					[
-						"diminished interest or pleasure in activities"
+						"diminished interest in activities",
+						"diminished pleasure in daily activities"
 					]
 				}
 			],
@@ -76,7 +79,8 @@
 					},
 					"dc:description": 
 					[
-						"significant weight change"
+						"significant weight gain",
+						"significant weight loss"
 					]
 				},
                 {
@@ -90,7 +94,8 @@
 					},
 					"dc:description": 
 					[
-						"insomnia"
+						"insomnia",
+						"hypersomnia"
 					]
 				},
                 {
@@ -103,7 +108,8 @@
 					},
 					"dc:description": 
 					[
-						"psychomotor agitation"
+						"psychomotor agitation",
+						"psychomotor retardation"
 					]
 				},
                 {
@@ -116,7 +122,8 @@
 					},
 					"dc:description": 
 					[
-						"loss of energy"
+						"loss of energy",
+						"fatigue"
 					]
 				},
 				{
@@ -129,7 +136,9 @@
 					},
 					"dc:description": 
 					[
-						"diminished ability to think"
+						"diminished ability to think",
+						"diminished ability to concentrate",
+						"indecisiveness"
 					]
 				},
 				{
@@ -142,20 +151,11 @@
 					},
 					"dc:description": 
 					[
-						"thoughts of death"
+						"thoughts of death",
+						"suicide attempt",
+						"plans for suicide"
 					]
 				}
-			]
-		},
-
-
-
-		{
-			"foaf:name": "John",
-			"@type": "foaf:Person",
-			"ns:hasSymptom":
-			[
-
 			]
 		}
 	]

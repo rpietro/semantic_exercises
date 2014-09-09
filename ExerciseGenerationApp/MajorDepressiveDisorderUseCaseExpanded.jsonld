@@ -48,6 +48,15 @@
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "depressed mood"
+          },
+          {
+            "@value": "sadness"
+          },
+          {
+            "@value": "hopeless"
+          },
+          {
+            "@value": "irritable mood"
           }
         ],
         "http://purl.org/dc/elements/1.1/subject": [
@@ -72,7 +81,10 @@
       {
         "http://purl.org/dc/elements/1.1/description": [
           {
-            "@value": "diminished interest or pleasure in activities"
+            "@value": "diminished interest in activities"
+          },
+          {
+            "@value": "diminished pleasure in daily activities"
           }
         ],
         "http://purl.org/dc/elements/1.1/subject": [
@@ -95,16 +107,14 @@
         ]
       }
     ],
-    "http://diseasesdiagnosis.com/vocab#minimumQuantityOfOptionalSymptoms": [
-      {
-        "@value": 4
-      }
-    ],
     "http://diseasesdiagnosis.com/vocab#optionalSymptoms": [
       {
         "http://purl.org/dc/elements/1.1/description": [
           {
-            "@value": "significant weight change"
+            "@value": "significant weight gain"
+          },
+          {
+            "@value": "significant weight loss"
           }
         ],
         "http://purl.org/dc/elements/1.1/subject": [
@@ -131,6 +141,9 @@
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "insomnia"
+          },
+          {
+            "@value": "hypersomnia"
           }
         ],
         "http://purl.org/dc/elements/1.1/subject": [
@@ -156,6 +169,9 @@
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "psychomotor agitation"
+          },
+          {
+            "@value": "psychomotor retardation"
           }
         ],
         "http://purl.org/dc/elements/1.1/subject": [
@@ -181,6 +197,9 @@
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "loss of energy"
+          },
+          {
+            "@value": "fatigue"
           }
         ],
         "http://purl.org/dc/elements/1.1/subject": [
@@ -206,6 +225,12 @@
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "diminished ability to think"
+          },
+          {
+            "@value": "diminished ability to concentrate"
+          },
+          {
+            "@value": "indecisiveness"
           }
         ],
         "http://purl.org/dc/elements/1.1/subject": [
@@ -231,6 +256,12 @@
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "thoughts of death"
+          },
+          {
+            "@value": "suicide attempt"
+          },
+          {
+            "@value": "plans for suicide"
           }
         ],
         "http://purl.org/dc/elements/1.1/subject": [
@@ -253,16 +284,5 @@
         ]
       }
     ]
-  },
-  {
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Person"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@value": "John"
-      }
-    ],
-    "http://diseasesdiagnosis.com/vocab#hasSymptom": []
   }
 ]

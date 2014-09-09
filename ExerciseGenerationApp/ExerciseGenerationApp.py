@@ -1,12 +1,17 @@
-import rdflib
 
-jsonldFile = open('MajorDepressiveDisorderUseCaseExpanded.jsonld', 'r')
-queryFile = open('MajorDepressiveDisorderUseCase.query', 'r').read()
+import rdflib
+import random
+
+jsonldData = open('MajorDepressiveDisorderUseCaseExpanded.jsonld', 'r')
+queryData = open('MajorDepressiveDisorderUseCase.query', 'r').read()
 
 graph = rdflib.Graph()
-graph.parse( jsonldFile , format = 'json-ld' )
+graph.parse( jsonldData , format = 'json-ld' )
 
-result = graph.query( queryFile )
+queryData = queryData.replace( '<!-numOfOptionalSymptoms-!>' , str( random.randint(4,6) ) )
+queryData = queryData.replace( '<!-numOfMandatorySymptoms-!>' , str( random.randint(1,2) ) )
+
+result = graph.query( queryData )
 
 symptoms = []
 for ( symptom , description ) in result:
