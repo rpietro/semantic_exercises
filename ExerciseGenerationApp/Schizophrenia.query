@@ -9,19 +9,13 @@ SELECT ?symptomName ?symptomDescription
 
 WHERE
 {
-	?disease rdf:type ?diseaseType .
-	?diseaseType dc:subject ?meshDiseaseType .
-	?meshDiseaseType rdf:value "C23.550.288" .
-	?meshDiseaseType rdfs:label "Disease" .
-
-	?disease dc:subject ?meshDisease .
-	?meshDisease rdf:value "F03.600.300.375" .
-	?meshDisease rdfs:label "Depressive Disorder, Major" .
-
 	{
         SELECT ?diseaseSymptom ?symptomName WHERE
         {
-
+			?disease dc:subject ?meshDisease .
+			?meshDisease rdf:value "F03.700.750" .
+			?meshDisease rdfs:label "Schizophrenia" .
+	
             ?disease ns:optionalSymptoms ?diseaseSymptom .
             ?diseaseSymptom dc:subject ?meshOptionalSymptom .
             ?meshOptionalSymptom rdf:value ?optionalSymptomID .
@@ -34,6 +28,9 @@ WHERE
 	{
 		SELECT ?diseaseSymptom ?symptomName WHERE
 		{
+			?disease dc:subject ?meshDisease .
+			?meshDisease rdf:value "F03.700.750" .
+			?meshDisease rdfs:label "Schizophrenia" .
 	
 			?disease ns:mandatorySymptoms ?diseaseSymptom .
 			?diseaseSymptom dc:subject ?meshMandatorySymptom .
@@ -41,7 +38,7 @@ WHERE
 			?meshMandatorySymptom rdfs:label ?symptomName .
 		} LIMIT <!-numOfMandatorySymptoms-!>
 	}
-
+	
 	?diseaseSymptom dc:description ?symptomDescription .
 
 }
