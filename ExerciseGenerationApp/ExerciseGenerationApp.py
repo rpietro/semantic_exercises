@@ -2,38 +2,45 @@
 import rdflib
 import random
 
-jsonldData = open('MajorDepressiveDisorderUseCaseExpanded.jsonld', 'r')
-queryData = open('MajorDepressiveDisorderUseCase.query', 'r').read()
+useCases = [
+        ( 'Major Depressive Disorder', 'MajorDepressiveDisorder.query', (4,6), (1,2) ),
+        ( 'Schizophrenia', 'Schizophrenia.query', (1,2), (1,3) )
+    ]
+
+( disease, queryFile, (minOptionalSymptoms, maxOptionalSymptoms), (minMandatorySymptoms, maxMandatorySymptoms)  ) = random.choice( useCases )
+
+jsonldData = open("ClinicalCaseExerciciesOntologyExpanded.jsonld", 'r').read()
+queryData = open(queryFile, 'r').read()
 
 graph = rdflib.Graph()
-graph.parse( jsonldData , format = 'json-ld' )
+graph.parse( data = jsonldData , format = 'json-ld' )
 
-queryData = queryData.replace( '<!-numOfOptionalSymptoms-!>' , str( random.randint(4,6) ) )
-queryData = queryData.replace( '<!-numOfMandatorySymptoms-!>' , str( random.randint(1,2) ) )
+queryData = queryData.replace( '<!-numOfOptionalSymptoms-!>' , str( random.randint( minOptionalSymptoms, maxOptionalSymptoms ) ) )
+queryData = queryData.replace( '<!-numOfMandatorySymptoms-!>' , str( random.randint( minMandatorySymptoms, maxMandatorySymptoms ) ) )
 
 result = graph.query( queryData )
 
 symptoms = []
 for ( symptom , description ) in result:
-    symptoms.append( ( unicode( symptom ) , unicode( description ) ) )
+    symptoms.append( ( str( symptom ) , str( description ) ) )
 
-print 'The patient comes to the office reporting',
+print ('The patient comes to the office reporting', end=' ')
 for ( idS , ( symptom , description ) ) in enumerate( symptoms ):
-    print description,
+    print (description,end='')
     if idS == len(symptoms) - 1:
-        print '.'
+        print ('.')
     elif idS == len(symptoms) - 2:
-        print 'and',
-    else: print ',',
+        print (' and',end=' ')
+    else: print (',',end=' ')
 
-print 'The most likely diagnostic is Major Depressive Disorder'
+print ('The most likely diagnostic is ' + disease)
 
-print 'Because it includes symptoms of',
+print ('Because it includes symptoms of',end=' ')
 for ( idS , ( symptom , description ) ) in enumerate( symptoms ):
-    print symptom,
+    print (symptom,end='')
     if idS == len(symptoms) - 1:
-        print '.'
+        print ('.')
     elif idS == len(symptoms) - 2:
-        print 'and',
-    else: print ',',
+        print (' and',end=' ')
+    else: print (',',end=' ')
 

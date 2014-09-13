@@ -16,7 +16,6 @@
 			"@id": "ns:C23.550.288",
 			"dc:subject": 
 			{
-				"@id": "dcterms:MESH/C23.550.288",
 				"rdf:value": "C23.550.288",
 				"rdfs:label": "Disease",
 				"@type": "dcterms:MESH"
@@ -29,7 +28,6 @@
 			"@type": "ns:C23.550.288",
 			"dc:subject": 
 			{
-				"@id": "dcterms:MESH/F03.600.300.375",
 				"rdf:value": "F03.600.300.375",
 				"rdfs:label": "Depressive Disorder, Major",
 				"@type": "dcterms:MESH"
@@ -84,7 +82,6 @@
 					]
 				},
                 {
-					"@id": "ns:C10.886.425.800.800",
 					"dc:subject": 
 					{
 						"@id": "ns:C23.888.592.796",
@@ -157,6 +154,102 @@
 					]
 				}
 			]
+		},
+		
+		
+		{
+			"@id": "ns:F03.700.750",
+			"@type": "ns:C23.550.288",
+			"dc:subject": 
+			{
+				"rdf:value": "F03.700.750",
+				"rdfs:label": "Schizophrenia",
+				"@type": "dcterms:MESH"
+			},
+            "ns:mandatorySymptoms":
+			[
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:F01.145.126.200",
+						"rdf:value": "F01.145.126.200",
+						"rdfs:label": "Delusions",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"delusions",
+						"daymare"
+					]
+				},
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:C23.888.592.604.764.300",
+						"rdf:value": "C23.888.592.604.764.300",
+						"rdfs:label": "Hallucinations",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"hallucinations"
+					]
+				},
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:C23.888.592.604.150.500.800.100",
+						"rdf:value": "C23.888.592.604.150.500.800.100",
+						"rdfs:label": "Aphasia",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"disorganized thinking",
+						"disorganized speech",
+						"illogicality",
+						"poverty of speech"
+					]
+				}
+			],
+			"ns:optionalSymptoms":
+			[
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:CC23.888.592.604.115",
+						"rdf:value": "C23.888.592.604.115",
+						"rdfs:label": "Catatonia",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"no reaction to external stimuli",
+						"non-existent motor activity",
+						"purposeless agitation",
+						"purposeless excitation"
+					]
+				},
+				{
+					"dc:subject": 
+					{
+						"@id": "ns:F01.145.126.100",
+						"rdf:value": "F01.145.126.100",
+						"rdfs:label": "Affective Symptoms",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"diminished emotional expression",
+						"no facial expression",
+						"lack of interest in the world",
+						"lack of interest in other people",
+						"inability to feel pleasure"
+					]
+				}
+			]
 		}
+	
+	
 	]
 }
