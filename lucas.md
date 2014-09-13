@@ -86,36 +86,27 @@ Table 1. Clinical case exercise and corresponding template
 
 ### Item model
 
-In order to create our items (the psychometric term for exercises), we have assumed a fixed structure for its stem, alternative options and feedback structure.
+Um paciente do sexo {{gender}}, {{age}} anos de idade, estado civil {{marital_status}}, vem ao consultório com as seguintes queixas:
 
-#### Item stem
+* {{natural_language_symptom}}
+* {{natural_language_symptom}}
+* {{natural_language_symptom}}
+* {{natural_language_symptom}}
+* {{natural_language_symptom}}
+* {{natural_language_symptom}}
 
-The stem has three components
+O diagnóstico mais provável é:
 
-* Situational information such as patient socio-demographic and social support characteristics
-    * "Patient is a {{male}}, {{26}} years old, coming to the {{Emergency Room}} because of" 
-    * Variables
-        * "gender" : ["male", "female"]
-        *  "age" : ""
-        *  "visit_setting" : ["Emergency Room", "office"]
-    * Some of the variable might or might not influence the choice of an alternative option. The ones that do not can vary randomly within a certain range
-* Patient characteristics that are connected to the decision regarding Clinical Practice Guideline
-    * symptoms
-    * signs
-    * laboratory_results
-    * imaging_results
-    * response to treatment
-* 
+(x) {{}}
+( ) {{}}
+( ) {{}}
+( ) {{}}
+( ) {{}}
 
+[explanation]
+{{natural_language_diagnostic_criteria}}
+[explanation]
 
-
-
-#### Item alternative options
-
-
-#### Item feedback
-
-Feedback is composed by the full evidence-based fact
 
 ### Ontology structure
 
@@ -135,6 +126,10 @@ Feedback is composed by the full evidence-based fact
 
 ## Results
 ### Query results
+
+* libraries
+    * rdflib https://pypi.python.org/pypi/rdflib
+    * rdflib-jsonld https://pypi.python.org/pypi/rdflib-jsonld
 
 http://dublincore.org/documents/dcq-rdf-xml/
 
