@@ -3,20 +3,17 @@ import rdflib
 import random
 
 useCases = [
-        ( 'Major Depressive Disorder', 'MajorDepressiveDisorder.query', (4,6), (1,2) ),
-        ( 'Schizophrenia', 'Schizophrenia.query', (1,2), (1,3) )
-    ]
+    ('Major Depressive Disorder', "MajorDepressiveDisorder.query"),
+    ('Schizophrenia', "Schizophrenia.query")
+]
 
-( disease, queryFile, (minOptionalSymptoms, maxOptionalSymptoms), (minMandatorySymptoms, maxMandatorySymptoms)  ) = random.choice( useCases )
+( disease , query ) = random.choice( useCases )
 
 jsonldData = open("ClinicalCaseExerciciesOntologyExpanded.jsonld", 'r').read()
-queryData = open(queryFile, 'r').read()
+queryData = open(query, 'r').read()
 
 graph = rdflib.Graph()
 graph.parse( data = jsonldData , format = 'json-ld' )
-
-queryData = queryData.replace( '<!-numOfOptionalSymptoms-!>' , str( random.randint( minOptionalSymptoms, maxOptionalSymptoms ) ) )
-queryData = queryData.replace( '<!-numOfMandatorySymptoms-!>' , str( random.randint( minMandatorySymptoms, maxMandatorySymptoms ) ) )
 
 result = graph.query( queryData )
 

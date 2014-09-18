@@ -20,7 +20,7 @@ WHERE
             ?diseaseSymptom dc:subject ?meshOptionalSymptom .
             ?meshOptionalSymptom rdf:value ?optionalSymptomID .
             ?meshOptionalSymptom rdfs:label ?symptomName .
-        } LIMIT <!-numOfOptionalSymptoms-!>
+        } LIMIT 4
 	} 
 	
 	UNION
@@ -36,7 +36,7 @@ WHERE
 			?diseaseSymptom dc:subject ?meshMandatorySymptom .
 			?meshMandatorySymptom rdf:value ?mandatorySymptomID .
 			?meshMandatorySymptom rdfs:label ?symptomName .
-		} LIMIT <!-numOfMandatorySymptoms-!>
+		} LIMIT 1
 	}
 
 	?diseaseSymptom dc:description ?symptomDescription .

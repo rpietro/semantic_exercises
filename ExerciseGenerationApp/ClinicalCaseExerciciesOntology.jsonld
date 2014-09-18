@@ -26,6 +26,7 @@
 		{
 			"@id": "ns:F03.600.300.375",
 			"@type": "ns:C23.550.288",
+			"ns:minimumOptionalSymptoms": 3,
 			"dc:subject": 
 			{
 				"rdf:value": "F03.600.300.375",
