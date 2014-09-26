@@ -4,6 +4,7 @@ Lucas O. Teixeira
 João Ricardo Vissoci  
 Bruno Melo  
 Ricardo Pietrobon
+Gustavo C. Medeiros
 
 ## Abstract
 
