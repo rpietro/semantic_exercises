@@ -1,4 +1,4 @@
-# Semi-automatic generation of clinical case exercises based on Clinical Practice Guidelines using semantic representation
+# Semi-automatic generation of clinical case exercises based on diagnostic classifications using semantic representation
 
 Lucas O. Teixeira  
 João Ricardo Vissoci  
@@ -10,22 +10,22 @@ Ricardo Pietrobon
 
 ## Introduction
 
-Although Clinical Practice Guidelines were designed with the intent of disseminating the best available evidence to healthcare professionals, they are delivered in a format that is informative rather than educational. It is therefore no surprise that adherence to clinical practice guidelines have been reported to be poor <!-- ref -->, ultimately decreasing the benefit that would arise from the best available evidence being applied to patients. To our knowledge, however, there have been no previous attempts to automatically convert Clinical Practice Guidelines to a format that would be directly applicable to a learning environment.
+Although diagnostic guidelines and classifications such as the DSM-V and the ones released for the diagnosis of rheumatological conditions were designed with the intent of facilitating the day to day activities of clinicians around the globe, they are largely delivered in a format that is informative rather than educational. It is therefore no surprise that adherence to these classifications are poorly followed <!-- ref -->, ultimately decreasing the benefit that would arise from a more accurate diagnosis such as the ability to properly follow the best available evidence. To our knowledge, however, there have been no previous attempts to automatically convert diagnostic guidelines to a format that would be directly applicable to a learning environment.
 
 * lit review education applied to Clinical Practice Guidelines
 * lit review of semantic representation of Clinical Practice Guidelines
 
-The objective of this article is therefore to present the structure and results of a novel methodology using a semantic representation of Clinical Practice Guidelines, which is then semi-automatically deployed to clinical case exercises deployable to the [open edX]() learning management system. The architecture and multiple validation cases are presented.
+The objective of this article is therefore to present the structure and results of a novel methodology using a semantic representation of diagnostic classifications, which is then semi-automatically deployed to clinical case exercises deployable to the [open edX]() learning management system. The architecture and multiple validation cases are presented.
 
 
 
 
 ## Methods
 
-### Source of Clinical Practice Guidelines
+### Source of Diagnostic Guidelines
 
-* [National Guideline Clearinghouse](http://www.guideline.gov/) using guidelines focused on Mental Health
-* 3 guidelines:
+* DSM-V
+* Rheumatological diagnostic criteria released by the American Rheumatological Association
 
 
 ### Use case
@@ -33,28 +33,12 @@ The objective of this article is therefore to present the structure and results 
 
 #### Diagnosis
 
-Patient is a {{male}}, {{28}} years old, comes to the {{office}}, {{no family support}}. with symptoms of {{crying often}}, {{not being able to sleep at night}} and {{suicidal thinking}}. The most likely diagnosis is:
+<!-- add DSM-V criteria for depression and RA criteria-->
 
-( ) {{anxiety}}
-(x) {{major depression}}
-( ) {{obsessive compulsive disorder}}
-
-[explanation]
-The {{diagnostic criteria}} for {{major depression}} according to {{DSM-V}} are symptoms of {{crying often}}, {{not being able to sleep at night}} and {{suicidal thinking}}. Signs might include {{}}. Laboratory results might include {{}}. Imaging results might include {{}}
-[explanation]
 
 
 #### Treatment
 
-Patient is a {{female}}, {{34}} years old, comes to the {{office}}. She presents {{good family support}}. A diagnosis of mild depression is established. The least agreessive treatment and yet recognized as being effective in multiple Clinical Practice Guidelines is:
-
-( ) {{ECT}}
-(x) {{isolated psychotherapy}}
-( ) {{psychotherapy and tricyclic antidepressants}}
-
-[explanation]
-Mild and moderate depression have been demonstrated to be effectively treated with isolated psychotherapy
-[explanation]
 
 
 
@@ -66,23 +50,7 @@ Mild and moderate depression have been demonstrated to be effectively treated wi
 * statement example
 * observer agreement
 
-JSON (not in a JSON-LD format)
 
-[
-{
-    "eb-fact" : "",
-    "source" : {
-        "reference" : "",
-        "hyperlink" : "",
-        "publication_date" : ""
-        },
-        "classification" : {
-            "diagnosis_cat" : [""],
-            "treatment_cat" : [""],
-        }
-    }
-
-    ]
 
 
 
@@ -117,15 +85,38 @@ The stem might have three components
 
 #### Feedback
 
-Feedback is composed by the full evidence-based fact
+Feedback is composed by the full diagnostic criteria
 
-### Semantic encoding of Clinical Practice Guidelines using JSON-LD
+### Semantic representation of Clinical Practice Guidelines using JSON-LD
 
 <!-- idea is to build the ontology from the use case -->
 
+<!-- Lucas, here I would add the following:
 
+a. ontology in json-ld, including the classes for symptoms we are trying to represent with a property connecting them to how these symptoms would be represented in a clinical exercise
+b. link each symptom and condition to a class from bioportal
+c. build a PLO (Personalized Learning Ontology) namespace which will add missing classes along with properties that will give us the inferences we need
+
+
+  -->
+
+
+#### Classes
+
+<!-- connect to other ontologies in the Bioportal -->
+<!-- Properties -->
+
+#### Queries
+
+
+#### Demo app
 
 
 ## Results
 
 ## Discussion
+
+
+## References
+
+<!-- Lucas, let's add them in bibtex format since that's easy to process through Rmarkdown -->
