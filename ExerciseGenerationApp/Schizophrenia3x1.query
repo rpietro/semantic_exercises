@@ -1,0 +1,46 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ns: <http://diseasesdiagnosis.com/vocab#>
+
+SELECT ?symptomName ?symptomDescription
+
+WHERE
+{
+	{
+        SELECT ?diseaseSymptom ?symptomName WHERE
+        {
+			?disease dc:subject ?meshDisease .
+			?meshDisease rdf:value "F03.700.750" .
+			?meshDisease rdfs:label "Schizophrenia" .
+	
+            ?disease ns:optionalSymptoms ?diseaseSymptom .
+            ?diseaseSymptom dc:subject ?meshOptionalSymptom .
+            ?meshOptionalSymptom rdf:value ?optionalSymptomID .
+            ?meshOptionalSymptom rdfs:label ?symptomName .
+        } LIMIT 3
+	} 
+	
+	UNION
+	
+	{
+		SELECT ?diseaseSymptom ?symptomName WHERE
+		{
+			?disease dc:subject ?meshDisease .
+			?meshDisease rdf:value "F03.700.750" .
+			?meshDisease rdfs:label "Schizophrenia" .
+	
+			?disease ns:mandatorySymptoms ?diseaseSymptom .
+			?diseaseSymptom dc:subject ?meshMandatorySymptom .
+			?meshMandatorySymptom rdf:value ?mandatorySymptomID .
+			?meshMandatorySymptom rdfs:label ?symptomName .
+		} LIMIT 1
+	}
+	
+	?diseaseSymptom dc:description ?symptomDescription .
+
+}
+
+GROUP BY ?symptomName

@@ -1,0 +1,256 @@
+{
+	"@context":
+	{
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"dc": "http://purl.org/dc/elements/1.1/",
+		"dcterms": "http://purl.org/dc/terms/",
+		"foaf": "http://xmlns.com/foaf/0.1/",
+		"ns": "http://diseasesdiagnosis.com/vocab#"
+	},
+	"@graph": 
+	[
+
+
+		{
+			"@id": "ns:C23.550.288",
+			"dc:subject": 
+			{
+				"rdf:value": "C23.550.288",
+				"rdfs:label": "Disease",
+				"@type": "dcterms:MESH"
+			}
+		},
+
+
+		{
+			"@id": "ns:F03.600.300.375",
+			"@type": "ns:C23.550.288",
+			"ns:minimumOptionalSymptoms": 3,
+			"dc:subject": 
+			{
+				"rdf:value": "F03.600.300.375",
+				"rdfs:label": "Depressive Disorder, Major",
+				"@type": "dcterms:MESH"
+			},
+			"ns:mandatorySymptoms":
+			[
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:F01.145.126.350",
+						"rdf:value": "F01.145.126.350",
+						"rdfs:label": "Depression",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"depressed mood",
+						"sadness",
+						"hopeless",
+						"irritable mood"
+					]
+				},
+				{
+					"dc:subject": 
+					{
+						"@id": "ns:C23.888.592.604.039",
+						"rdf:value": "C23.888.592.604.039",
+						"rdfs:label": "Anhedonia",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"diminished interest in activities",
+						"diminished pleasure in daily activities"
+					]
+				}
+			],
+            "ns:optionalSymptoms":
+			[
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:C23.888.144.243",
+						"rdf:value": "C23.888.144.243",
+						"rdfs:label": "Body Weight Changes",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"significant weight gain",
+						"significant weight loss"
+					]
+				},
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:C23.888.592.796",
+						"rdf:value": "C23.888.592.796",
+						"rdfs:label": "Sleep Disorders",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"insomnia",
+						"hypersomnia"
+					]
+				},
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:C23.888.592.604.882",
+						"rdf:value": "C23.888.592.604.882",
+						"rdfs:label": "Psychomotor Disorders",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"psychomotor agitation",
+						"psychomotor retardation"
+					]
+				},
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:C23.888.369",
+						"rdf:value": "C23.888.369",
+						"rdfs:label": "Fatigue",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"loss of energy",
+						"fatigue"
+					]
+				},
+				{
+					"dc:subject": 
+					{
+						"@id": "ns:C23.888.592.604.444",
+						"rdf:value": "C23.888.592.604.444",
+						"rdfs:label": "Lethargy",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"diminished ability to think",
+						"diminished ability to concentrate",
+						"indecisiveness"
+					]
+				},
+				{
+					"dc:subject": 
+					{
+						"@id": "ns:F01.145.126.980.875.149",
+						"rdf:value": "F01.145.126.980.875.149",
+						"rdfs:label": "Suicidal Ideation",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"thoughts of death",
+						"suicide attempt",
+						"plans for suicide"
+					]
+				}
+			]
+		},
+		
+		
+		{
+			"@id": "ns:F03.700.750",
+			"@type": "ns:C23.550.288",
+			"dc:subject": 
+			{
+				"rdf:value": "F03.700.750",
+				"rdfs:label": "Schizophrenia",
+				"@type": "dcterms:MESH"
+			},
+            "ns:mandatorySymptoms":
+			[
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:F01.145.126.200",
+						"rdf:value": "F01.145.126.200",
+						"rdfs:label": "Delusions",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"delusions",
+						"daymare"
+					]
+				},
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:C23.888.592.604.764.300",
+						"rdf:value": "C23.888.592.604.764.300",
+						"rdfs:label": "Hallucinations",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"hallucinations"
+					]
+				},
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:C23.888.592.604.150.500.800.100",
+						"rdf:value": "C23.888.592.604.150.500.800.100",
+						"rdfs:label": "Aphasia",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"disorganized thinking",
+						"disorganized speech",
+						"illogicality",
+						"poverty of speech"
+					]
+				}
+			],
+			"ns:optionalSymptoms":
+			[
+                {
+					"dc:subject": 
+					{
+						"@id": "ns:CC23.888.592.604.115",
+						"rdf:value": "C23.888.592.604.115",
+						"rdfs:label": "Catatonia",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"no reaction to external stimuli",
+						"non-existent motor activity",
+						"purposeless agitation",
+						"purposeless excitation"
+					]
+				},
+				{
+					"dc:subject": 
+					{
+						"@id": "ns:F01.145.126.100",
+						"rdf:value": "F01.145.126.100",
+						"rdfs:label": "Affective Symptoms",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": 
+					[
+						"diminished emotional expression",
+						"no facial expression",
+						"lack of interest in the world",
+						"lack of interest in other people",
+						"inability to feel pleasure"
+					]
+				}
+			]
+		}
+	
+	
+	]
+}

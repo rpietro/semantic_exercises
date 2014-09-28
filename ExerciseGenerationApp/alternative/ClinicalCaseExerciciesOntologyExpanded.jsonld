@@ -1,0 +1,536 @@
+[
+  {
+    "@id": "http://diseasesdiagnosis.com/vocab#C23.550.288",
+    "http://purl.org/dc/elements/1.1/subject": [
+      {
+        "@type": [
+          "http://purl.org/dc/terms/MESH"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+          {
+            "@value": "C23.550.288"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Disease"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://diseasesdiagnosis.com/vocab#F03.600.300.375",
+    "@type": [
+      "http://diseasesdiagnosis.com/vocab#C23.550.288"
+    ],
+    "http://purl.org/dc/elements/1.1/subject": [
+      {
+        "@type": [
+          "http://purl.org/dc/terms/MESH"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+          {
+            "@value": "F03.600.300.375"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Depressive Disorder, Major"
+          }
+        ]
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#mandatorySymptoms": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.350",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "depressed mood"
+          },
+          {
+            "@value": "sadness"
+          },
+          {
+            "@value": "hopeless"
+          },
+          {
+            "@value": "irritable mood"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "F01.145.126.350"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Depression"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.039",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "diminished interest in activities"
+          },
+          {
+            "@value": "diminished pleasure in daily activities"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "C23.888.592.604.039"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Anhedonia"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#minimumOptionalSymptoms": [
+      {
+        "@value": 3
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#optionalSymptoms": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.144.243",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "significant weight gain"
+          },
+          {
+            "@value": "significant weight loss"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "C23.888.144.243"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Body Weight Changes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.796",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "insomnia"
+          },
+          {
+            "@value": "hypersomnia"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "C23.888.592.796"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Sleep Disorders"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.882",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "psychomotor agitation"
+          },
+          {
+            "@value": "psychomotor retardation"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "C23.888.592.604.882"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Psychomotor Disorders"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.369",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "loss of energy"
+          },
+          {
+            "@value": "fatigue"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "C23.888.369"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Fatigue"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.444",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "diminished ability to think"
+          },
+          {
+            "@value": "diminished ability to concentrate"
+          },
+          {
+            "@value": "indecisiveness"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "C23.888.592.604.444"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Lethargy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.980.875.149",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "thoughts of death"
+          },
+          {
+            "@value": "suicide attempt"
+          },
+          {
+            "@value": "plans for suicide"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "F01.145.126.980.875.149"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Suicidal Ideation"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://diseasesdiagnosis.com/vocab#F03.700.750",
+    "@type": [
+      "http://diseasesdiagnosis.com/vocab#C23.550.288"
+    ],
+    "http://purl.org/dc/elements/1.1/subject": [
+      {
+        "@type": [
+          "http://purl.org/dc/terms/MESH"
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+          {
+            "@value": "F03.700.750"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Schizophrenia"
+          }
+        ]
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#mandatorySymptoms": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.200",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "delusions"
+          },
+          {
+            "@value": "daymare"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "F01.145.126.200"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Delusions"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.764.300",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "hallucinations"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "C23.888.592.604.764.300"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Hallucinations"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.150.500.800.100",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "disorganized thinking"
+          },
+          {
+            "@value": "disorganized speech"
+          },
+          {
+            "@value": "illogicality"
+          },
+          {
+            "@value": "poverty of speech"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "C23.888.592.604.150.500.800.100"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Aphasia"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#optionalSymptoms": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#CC23.888.592.604.115",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "no reaction to external stimuli"
+          },
+          {
+            "@value": "non-existent motor activity"
+          },
+          {
+            "@value": "purposeless agitation"
+          },
+          {
+            "@value": "purposeless excitation"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "C23.888.592.604.115"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Catatonia"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.100",
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@value": "diminished emotional expression"
+          },
+          {
+            "@value": "no facial expression"
+          },
+          {
+            "@value": "lack of interest in the world"
+          },
+          {
+            "@value": "lack of interest in other people"
+          },
+          {
+            "@value": "inability to feel pleasure"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/subject": [
+          {
+            "@type": [
+              "http://purl.org/dc/terms/MESH"
+            ],
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@value": "F01.145.126.100"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Affective Symptoms"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "John"
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#hasDisease": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F03.700.750"
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#hasSymptoms": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.764.300"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.200"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.100"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#CC23.888.592.604.115"
+      }
+    ]
+  },
+  {
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Mark"
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#hasDisease": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F03.600.300.375"
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#hasSymptoms": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.039"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.144.243"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.796"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.444"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.980.875.149"
+      }
+    ]
+  }
+]
