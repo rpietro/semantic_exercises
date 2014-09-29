@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+# Semi-automatic generation of clinical case exercises based on diagnostic classifications using semantic representation
+=======
 # Semantic automatic generation of clinical case exercises focused on diagnostic criteria
+>>>>>>> 63487b602ac1dfe3b44e9a50b9e2df60c558fb58
 
 Lucas O. Teixeira  
 João Ricardo Vissoci  
 Bruno Melo  
 Ricardo Pietrobon
+Gustavo C. Medeiros
 
 ## Abstract
 
@@ -12,7 +17,11 @@ Ricardo Pietrobon
 
 ## Introduction
 
+<<<<<<< HEAD
 According to the World Health Organization (WHO), mental illnesses are currently the greatest source of burden across all countries, responsible for a cost of nearly 2.5 trillion dollars in 2010 (@alwan2011global). This figure represents more than the annual GDP of 206 countries (United Nations, 2012). As a result, institutions such as the NIH have set mental health as one of their top four priorities in 2012 (National Institute of Mental Health- NIMH, 2012). One of the foundations currently used in treating mental disorders <!-- standardize as disorders?? --> is the establishment of clear diagnostic criteria for mental disorders <!-- repeitda-->, reinforced by the recently released Diagnostic and Statistical Manual for Mental Disorders - Fifth Edition (DSM-V) <!-- ref -->. Resulting from a task force within the American Psychiatric Association, the DSM-V attempts to provide diagnostic guidance and "training materials" (American Psychiatric Association - APA - 2014), ultimately improving the accuracy of diagnoses in clinical practice (APA, 2013). Despite its success in establishing consensus regarding specific criteria, the DSM-V's criteria has limitation in capturing contextual factors that almost invariably accompany mental conditions (Paris, 2013; Gintner, 2014). For example, <!-- contexto sociais -->
+=======
+Although diagnostic guidelines and classifications such as the DSM-V and the ones released for the diagnosis of rheumatological conditions were designed with the intent of facilitating the day to day activities of clinicians around the globe, they are largely delivered in a format that is informative rather than educational. It is therefore no surprise that adherence to these classifications are poorly followed <!-- ref -->, ultimately decreasing the benefit that would arise from a more accurate diagnosis such as the ability to properly follow the best available evidence. To our knowledge, however, there have been no previous attempts to automatically convert diagnostic guidelines to a format that would be directly applicable to a learning environment.
+>>>>>>> 3dc6dc2ed2c271ded2807532a97df14922ab22bf
 
 <!-- Despite its success in some fronts, the DSM-V does not capture the complexity mental disorders are complex and their management frequently requires a connection between biological basis, personality functioning, medical conditions, relevant stressors and environmental problems. (NIMH, 2012; Gintner,2014). As a result, developing efficient diagnostic skills in this area goes beyond providing stable criteria and requires the development of high quality educational strategies to avoid a narrow approach that would disregard contextual factors (Paris, 2013; Gintner, 2014). To our knowledge, however, such comprehensive educational approaches are rarely available. -->
 
@@ -20,7 +29,27 @@ In other to improve the diagnosis of mental disorders, the American Psychiatric 
 
 One recent alternative to achieve scalability and mass development of educational exercises is automatic item generation (AIG), defined as the creation of questions (items) using algorithms and automation (Deane, 2003). Among the advantages of AIG are the possibility of quickly delivering exercises in large scale, reducing recall bias, providing prompt feedback, performing quick comparison between subjects and decreasing costs (Gierl et al, 2012). Nonetheless, the applications of AIG are usually limited to simple, non-contextual items, therefore not making it the option of choice for complex or abstract subjects <!-- ref -->. As a consequence, the diagnosis of mental illnesses would be difficult to implement into a vocabulary-fixed database as is typical of AIG (Deane, 2003). As a way to overcome this limitation, researchers in other fields have applied Web Semantics to add context to <!-- example??? + citar-->. Despite the possibility of combining AIG and Web Semantics, to our knowledge no previous research has addressed this possibility.
 
+<<<<<<< HEAD
 In face of this gap in the literature, the objective of this article is to develop a framework where semantic web technologies are used to automatically generate highly contextualized exercises (items) in mental health. Specifically, we describe the ontological framework as well as its integration with the widely used Learning Management System [Open edX](http://code.edx.org/).
+=======
+[Lai, 2009](http://www.psych.umn.edu/psylabs/catcentral/pdf%20files/cat09lai.pdf)
+[Embretson, 2006](http://www.sciencedirect.com/science/article/pii/S0169716106260231)
+[Gierl, 2008](http://www.taotesting.com/advances-automatic-item-generation-and-demonstration)
+[Zhongquan, 2008](http://118.145.16.229:81/Jweb_xlkxjz/EN/abstract/abstract2407.shtml)
+[Gierl, 2012](http://www.ualberta.ca/~mgierl/files/published-papers/ijt%20item%20models%202012.pdf)
+
+ -->
+
+     
+
+<!-- We chose to use the JSON-LD format for the semantic representation of Clinical Practice Guidelines because it is a very lightweight format, strongly based on JSON and it is as representative as RDF and OWL. Moreover, we adopted the Dublin Core Metadata Standard with Medical Subject Headings controlled vocabulary [Check the possibility of using MEDDRA] in order to standardized our semantic representation allowing others to use it.  -->
+
+<<<<<<< HEAD
+The objective of this article is therefore to present the structure and results of a novel methodology using a semantic representation of diagnostic classifications, which is then semi-automatically deployed to clinical case exercises deployable to the [open edX]() learning management system. The architecture and multiple validation cases are presented.
+=======
+The objective of this article is therefore to present the structure and results of a novel methodology using a semantic representation of diagnostic criteria, which are then semi-automatically deployed to clinical case exercises deployable to the [open edX](http://code.edx.org/) learning management system. The architecture and four validation cases are presented.
+>>>>>>> 63487b602ac1dfe3b44e9a50b9e2df60c558fb58
+>>>>>>> 3dc6dc2ed2c271ded2807532a97df14922ab22bf
 
 
 
@@ -28,8 +57,15 @@ In face of this gap in the literature, the objective of this article is to devel
 ## Methods
 ### Ethics
 
+<<<<<<< HEAD
+### Source of Diagnostic Guidelines
+
+* DSM-V
+* Rheumatological diagnostic criteria released by the American Rheumatological Association
+=======
 Since this project did not involve subjects and the data also did not refer to participants, it was considered exempt from review on an Institutional Review Board. 
 
+>>>>>>> 63487b602ac1dfe3b44e9a50b9e2df60c558fb58
 
 
 
@@ -69,13 +105,20 @@ Table 1. Clinical case exercise and corresponding template
 
 <!-- add one template and one instantiated exercise -->
 
+<<<<<<< HEAD
+<!-- add DSM-V criteria for depression and RA criteria-->
+
+=======
 
 
+>>>>>>> 63487b602ac1dfe3b44e9a50b9e2df60c558fb58
 
 ### Item model
 
 Um paciente do sexo {{gender}}, {{age}} anos de idade, estado civil {{marital_status}}, vem ao consultório com as seguintes queixas:
 
+<<<<<<< HEAD
+=======
 * {{natural_language_symptom}}
 * {{natural_language_symptom}}
 * {{natural_language_symptom}}
@@ -94,6 +137,7 @@ O diagnóstico mais provável é:
 [explanation]
 {{natural_language_diagnostic_criteria}}
 [explanation]
+>>>>>>> 63487b602ac1dfe3b44e9a50b9e2df60c558fb58
 
 
 ### Ontology structure
@@ -111,6 +155,9 @@ O diagnóstico mais provável é:
 
 
 
+<<<<<<< HEAD
+
+=======
 
 ## Results
 ### Query results
@@ -248,6 +295,7 @@ http://dublincore.org/documents/dcq-rdf-xml/
         },
     ]
 }
+>>>>>>> 63487b602ac1dfe3b44e9a50b9e2df60c558fb58
 
 
 SPARQL Query:
@@ -290,22 +338,50 @@ WHERE
 
     FILTER NOT EXISTS {
 
+<<<<<<< HEAD
+Feedback is composed by the full diagnostic criteria
+
+### Semantic representation of Clinical Practice Guidelines using JSON-LD
+=======
         ?disease ns:mandatorySymptoms ?mandatorySymptom .
         ?mandatorySymptom dc:subject ?meshMandatorySymptom .
         ?meshMandatorySymptom rdf:value ?mandatorySymptomID .
         ?meshMandatorySymptom rdfs:label ?mandatorySymptomName .
 
         FILTER NOT EXISTS {
+>>>>>>> 63487b602ac1dfe3b44e9a50b9e2df60c558fb58
 
             ?patient ns:hasSymptom ?mandatorySymptom .
             ?mandatorySymptom dc:subject ?meshMandatorySymptom .
             ?meshMandatorySymptom rdf:value ?mandatorySymptomID .
             ?meshMandatorySymptom rdfs:label ?mandatorySymptomName .
 
+<<<<<<< HEAD
+<!-- Lucas, here I would add the following:
+
+a. ontology in json-ld, including the classes for symptoms we are trying to represent with a property connecting them to how these symptoms would be represented in a clinical exercise
+b. link each symptom and condition to a class from bioportal
+c. build a PLO (Personalized Learning Ontology) namespace which will add missing classes along with properties that will give us the inferences we need
+
+
+  -->
+
+
+#### Classes
+
+<!-- connect to other ontologies in the Bioportal -->
+<!-- Properties -->
+
+#### Queries
+
+
+#### Demo app
+=======
         }
     }
 
 }
+>>>>>>> 63487b602ac1dfe3b44e9a50b9e2df60c558fb58
 
 GROUP BY ?diseaseName ?quantityOfOptionalSymptoms HAVING ( COUNT(?optionalSymptom) >= ?quantityOfOptionalSymptoms )
 ORDER BY COUNT(?optionalSymptom)
@@ -324,6 +400,7 @@ To the best of our knowledge, this is the first description of a semantic automa
 
 Although our study brings a novel approach to the automatic generation of educational items, it does have limitations. First, we have not validated it against a wider range of clinical areas, which might pose different modeling challenges not anticipated by our current model. As a consequence, future models might not be back compatible. Second, our model currently does not apply to treatment in general, and more specifically to Clinical Practice Guidelines. Clinical Practice Guidelines are an essential part in the translation of the best available evidence to the daily healthcare practice, but their addition imposes a number of additional challenges such as the inclusion of treatment vocabularies as well as the treatment of a "situational interpretation" in treatment choice. For example, a given treatment might be applicable to a young patients whereas it might not on an elderly individual.
 
+<<<<<<< HEAD
 Based on the previously stated limitations, future research should focus on the expansion of our model to clinical treatment and the inclusion of a situations as a way to introduce a more nuanced level of detail to our items. Although this is, to our knowledge, the first report of a semantic automatic generation approach to clinical case exercises, we believe that its inclusion into existing learning management systems such as the [Open edX](http://code.edx.org/) platform will bring advantages to both learners and instructors.
 
 
@@ -346,3 +423,15 @@ Linden WJ, Glas CAW, eds. Elements of Adaptive Testing. New York, NY: Springer 2
   year={2011},
   publisher={World Health Organization}
 }
+=======
+<<<<<<< HEAD
+## Discussion
+
+
+## References
+
+<!-- Lucas, let's add them in bibtex format since that's easy to process through Rmarkdown -->
+=======
+Based on the previously stated limitations, future research should focus on the expansion of our model to clinical treatment and the inclusion of a situations as a way to introduce a more nuanced level of detail to our items. Although this is, to our knowledge, the first report of a semantic automatic generation approach to clinical case exercises, we believe that its inclusion into existing learning management systems such as the [Open edX](http://code.edx.org/) platform will bring advantages to both learners and instructors.
+>>>>>>> 63487b602ac1dfe3b44e9a50b9e2df60c558fb58
+>>>>>>> 3dc6dc2ed2c271ded2807532a97df14922ab22bf

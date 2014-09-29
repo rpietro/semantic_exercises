@@ -2,27 +2,19 @@
 import rdflib
 import random
 
-useCases = [
-    ('Major Depressive Disorder', "MajorDepressiveDisorder4x1.query"),
-    ('Major Depressive Disorder', "MajorDepressiveDisorder4x2.query"),
-    ('Major Depressive Disorder', "MajorDepressiveDisorder5x1.query"),
-    ('Schizophrenia', "Schizophrenia1x2.query"),
-    ('Schizophrenia', "Schizophrenia2x2.query"),
-    ('Schizophrenia', "Schizophrenia3x1.query"),
-]
 
-( disease , query ) = random.choice( useCases )
-
-jsonldData = open("ClinicalCaseExerciciesOntologyExpanded.jsonld", 'r').read()
-queryData = open(query, 'r').read()
+jsonldData = open('ClinicalCaseExerciciesOntologyExpanded.jsonld', 'r').read()
+queryData = open('selectCase.query', 'r').read()
 
 graph = rdflib.Graph()
 graph.parse( data = jsonldData , format = 'json-ld' )
 
+case = rdflib.Literal( random.choice( [ u'John' , u'Mark' ] ) )
+
 result = graph.query( queryData )
 
 symptoms = []
-for ( symptom , description ) in result:
+for ( disease , symptom , description ) in result:
     symptoms.append( ( str( symptom ) , str( description ) ) )
 
 print ('The patient comes to the office reporting', end=' ')
@@ -44,4 +36,3 @@ for ( idS , ( symptom , description ) ) in enumerate( symptoms ):
     elif idS == len(symptoms) - 2:
         print (' and',end=' ')
     else: print (',',end=' ')
-

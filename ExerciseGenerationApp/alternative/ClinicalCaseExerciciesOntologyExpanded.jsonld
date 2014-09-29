@@ -43,6 +43,7 @@
     ],
     "http://diseasesdiagnosis.com/vocab#mandatorySymptoms": [
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.350",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "depressed mood"
@@ -59,7 +60,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.350",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -77,6 +77,7 @@
         ]
       },
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.039",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "diminished interest in activities"
@@ -87,7 +88,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.039",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -112,6 +112,7 @@
     ],
     "http://diseasesdiagnosis.com/vocab#optionalSymptoms": [
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.144.243",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "significant weight gain"
@@ -122,7 +123,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#C23.888.144.243",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -140,6 +140,7 @@
         ]
       },
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.796",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "insomnia"
@@ -150,7 +151,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.796",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -168,6 +168,7 @@
         ]
       },
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.882",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "psychomotor agitation"
@@ -178,7 +179,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.882",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -196,6 +196,7 @@
         ]
       },
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.369",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "loss of energy"
@@ -206,7 +207,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#C23.888.369",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -224,6 +224,7 @@
         ]
       },
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.444",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "diminished ability to think"
@@ -237,7 +238,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.444",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -255,6 +255,7 @@
         ]
       },
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.980.875.149",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "thoughts of death"
@@ -268,7 +269,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.980.875.149",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -311,6 +311,7 @@
     ],
     "http://diseasesdiagnosis.com/vocab#mandatorySymptoms": [
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.200",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "delusions"
@@ -321,7 +322,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.200",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -339,6 +339,7 @@
         ]
       },
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.764.300",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "hallucinations"
@@ -346,7 +347,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.764.300",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -364,6 +364,7 @@
         ]
       },
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.150.500.800.100",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "disorganized thinking"
@@ -380,7 +381,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.150.500.800.100",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -400,6 +400,7 @@
     ],
     "http://diseasesdiagnosis.com/vocab#optionalSymptoms": [
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#CC23.888.592.604.115",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "no reaction to external stimuli"
@@ -416,7 +417,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#CC23.888.592.604.115",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -434,6 +434,7 @@
         ]
       },
       {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.100",
         "http://purl.org/dc/elements/1.1/description": [
           {
             "@value": "diminished emotional expression"
@@ -453,7 +454,6 @@
         ],
         "http://purl.org/dc/elements/1.1/subject": [
           {
-            "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.100",
             "@type": [
               "http://purl.org/dc/terms/MESH"
             ],
@@ -469,6 +469,67 @@
             ]
           }
         ]
+      }
+    ]
+  },
+  {
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "John"
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#hasDisease": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F03.700.750"
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#hasSymptoms": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.764.300"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.200"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.100"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#CC23.888.592.604.115"
+      }
+    ]
+  },
+  {
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Mark"
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#hasDisease": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F03.600.300.375"
+      }
+    ],
+    "http://diseasesdiagnosis.com/vocab#hasSymptoms": [
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.039"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.144.243"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.796"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#C23.888.592.604.444"
+      },
+      {
+        "@id": "http://diseasesdiagnosis.com/vocab#F01.145.126.980.875.149"
       }
     ]
   }

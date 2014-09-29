@@ -36,9 +36,9 @@
 			"ns:mandatorySymptoms":
 			[
                 {
+                	"@id": "ns:F01.145.126.350",
 					"dc:subject": 
 					{
-						"@id": "ns:F01.145.126.350",
 						"rdf:value": "F01.145.126.350",
 						"rdfs:label": "Depression",
 						"@type": "dcterms:MESH"
@@ -52,9 +52,9 @@
 					]
 				},
 				{
+					"@id": "ns:C23.888.592.604.039",
 					"dc:subject": 
 					{
-						"@id": "ns:C23.888.592.604.039",
 						"rdf:value": "C23.888.592.604.039",
 						"rdfs:label": "Anhedonia",
 						"@type": "dcterms:MESH"
@@ -69,9 +69,10 @@
             "ns:optionalSymptoms":
 			[
                 {
+                	"@id": "ns:C23.888.144.243",
 					"dc:subject": 
 					{
-						"@id": "ns:C23.888.144.243",
+						
 						"rdf:value": "C23.888.144.243",
 						"rdfs:label": "Body Weight Changes",
 						"@type": "dcterms:MESH"
@@ -83,9 +84,9 @@
 					]
 				},
                 {
+                	"@id": "ns:C23.888.592.796",
 					"dc:subject": 
 					{
-						"@id": "ns:C23.888.592.796",
 						"rdf:value": "C23.888.592.796",
 						"rdfs:label": "Sleep Disorders",
 						"@type": "dcterms:MESH"
@@ -97,9 +98,9 @@
 					]
 				},
                 {
+                	"@id": "ns:C23.888.592.604.882",
 					"dc:subject": 
 					{
-						"@id": "ns:C23.888.592.604.882",
 						"rdf:value": "C23.888.592.604.882",
 						"rdfs:label": "Psychomotor Disorders",
 						"@type": "dcterms:MESH"
@@ -111,9 +112,9 @@
 					]
 				},
                 {
+                	"@id": "ns:C23.888.369",
 					"dc:subject": 
 					{
-						"@id": "ns:C23.888.369",
 						"rdf:value": "C23.888.369",
 						"rdfs:label": "Fatigue",
 						"@type": "dcterms:MESH"
@@ -125,9 +126,9 @@
 					]
 				},
 				{
+					"@id": "ns:C23.888.592.604.444",
 					"dc:subject": 
 					{
-						"@id": "ns:C23.888.592.604.444",
 						"rdf:value": "C23.888.592.604.444",
 						"rdfs:label": "Lethargy",
 						"@type": "dcterms:MESH"
@@ -140,9 +141,9 @@
 					]
 				},
 				{
+					"@id": "ns:F01.145.126.980.875.149",
 					"dc:subject": 
 					{
-						"@id": "ns:F01.145.126.980.875.149",
 						"rdf:value": "F01.145.126.980.875.149",
 						"rdfs:label": "Suicidal Ideation",
 						"@type": "dcterms:MESH"
@@ -170,9 +171,9 @@
             "ns:mandatorySymptoms":
 			[
                 {
+                	"@id": "ns:F01.145.126.200",
 					"dc:subject": 
 					{
-						"@id": "ns:F01.145.126.200",
 						"rdf:value": "F01.145.126.200",
 						"rdfs:label": "Delusions",
 						"@type": "dcterms:MESH"
@@ -184,9 +185,9 @@
 					]
 				},
                 {
+                	"@id": "ns:C23.888.592.604.764.300",
 					"dc:subject": 
 					{
-						"@id": "ns:C23.888.592.604.764.300",
 						"rdf:value": "C23.888.592.604.764.300",
 						"rdfs:label": "Hallucinations",
 						"@type": "dcterms:MESH"
@@ -197,9 +198,9 @@
 					]
 				},
                 {
+                	"@id": "ns:C23.888.592.604.150.500.800.100",
 					"dc:subject": 
 					{
-						"@id": "ns:C23.888.592.604.150.500.800.100",
 						"rdf:value": "C23.888.592.604.150.500.800.100",
 						"rdfs:label": "Aphasia",
 						"@type": "dcterms:MESH"
@@ -216,9 +217,9 @@
 			"ns:optionalSymptoms":
 			[
                 {
+                	"@id": "ns:CC23.888.592.604.115",
 					"dc:subject": 
 					{
-						"@id": "ns:CC23.888.592.604.115",
 						"rdf:value": "C23.888.592.604.115",
 						"rdfs:label": "Catatonia",
 						"@type": "dcterms:MESH"
@@ -232,9 +233,9 @@
 					]
 				},
 				{
+					"@id": "ns:F01.145.126.100",
 					"dc:subject": 
 					{
-						"@id": "ns:F01.145.126.100",
 						"rdf:value": "F01.145.126.100",
 						"rdfs:label": "Affective Symptoms",
 						"@type": "dcterms:MESH"
@@ -247,6 +248,59 @@
 						"lack of interest in other people",
 						"inability to feel pleasure"
 					]
+				}
+			]
+		},
+
+		
+		
+		{
+			"@type": "foaf:Person",
+			"foaf:name": "John",
+			"ns:hasDisease": 
+			{
+				"@id": "ns:F03.700.750"
+			},
+			"ns:hasSymptoms":
+			[
+				{
+					"@id": "ns:C23.888.592.604.764.300"
+				},
+				{
+					"@id": "ns:F01.145.126.200"
+				},
+				{
+					"@id": "ns:F01.145.126.100"
+				},
+				{
+					"@id": "ns:CC23.888.592.604.115"
+				}
+			]
+		},
+
+		{
+			"@type": "foaf:Person",
+			"foaf:name": "Mark",
+			"ns:hasDisease": 
+			{
+				"@id": "ns:F03.600.300.375"
+			},
+			"ns:hasSymptoms":
+			[
+				{
+					"@id": "ns:C23.888.592.604.039"
+				},
+				{
+					"@id": "ns:C23.888.144.243"
+				},
+				{
+					"@id": "ns:C23.888.592.796"
+				},
+				{
+					"@id": "ns:C23.888.592.604.444"
+				},
+				{
+					"@id": "ns:F01.145.126.980.875.149"
 				}
 			]
 		}
