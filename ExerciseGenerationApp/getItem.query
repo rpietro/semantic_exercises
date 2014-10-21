@@ -1,0 +1,66 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX eg: <http://semanticautomaticitemgeneration.com/>
+
+SELECT 
+	(SAMPLE(?names) AS ?name)
+	(SAMPLE(?ages) AS ?age)
+	(SAMPLE(?statuss) AS ?status)
+	?minimumMandatorySymptoms ?minimumOptionalSymptoms
+	?optionalSymptomList ?mandatorySymptomList 
+WHERE 
+{
+	{
+		SELECT 
+			(CONCAT('{',GROUP_CONCAT(CONCAT('"',?optionalSymptom,'":"',?symptomDescription,'"');SEPARATOR=','),'}') AS ?optionalSymptomList)
+			(CONCAT('{',GROUP_CONCAT(CONCAT('"',?mandatorySymptom,'":"',?symptomDescription,'"');SEPARATOR=','),'}') AS ?mandatorySymptomList)
+		WHERE 
+		{
+			{
+				SELECT
+					?optionalSymptom (SAMPLE(?optionalSymptomDescriptions) AS ?symptomDescription)
+				WHERE {
+					eg:MajorDepressiveDisorderModel eg:hasSourcesOfInformation/eg:hasSignsAndSymptoms ?signsAndSymptoms .
+
+					?signsAndSymptom eg:hasOptionalSymptoms ?diseaseOptionalSymptom .
+					?diseaseOptionalSymptom dc:subject ?meshOptionalSymptom .
+					?meshOptionalSymptom rdfs:label ?optionalSymptom .
+					?diseaseOptionalSymptom dc:description ?optionalSymptomDescriptions .
+
+				} 
+				GROUP BY ?diseaseOptionalSymptom
+			}
+			UNION
+			{
+				SELECT
+					?mandatorySymptom (SAMPLE(?mandatorySymptomDescriptions) AS ?symptomDescription)
+				WHERE 
+				{
+					eg:MajorDepressiveDisorderModel eg:hasSourcesOfInformation/eg:hasSignsAndSymptoms ?signsAndSymptoms .
+
+					?signsAndSymptom eg:hasMandatorySymptoms ?diseaseMandatorySymptom .
+					?diseaseMandatorySymptom dc:subject ?meshMandatorySymptom .
+					?meshMandatorySymptom rdfs:label ?mandatorySymptom .
+					?diseaseMandatorySymptom dc:description ?mandatorySymptomDescriptions .
+
+				} GROUP BY ?diseaseMandatorySymptom
+			}
+		}
+	}
+
+	eg:MajorDepressiveDisorderModel eg:hasSourcesOfInformation ?sourcesOfInformation .
+	?sourcesOfInformation eg:hasPersonalInformation ?personalInformation .
+
+	?personalInformation foaf:name ?names .
+	?personalInformation foaf:age ?ages .
+	?personalInformation foaf:status ?statuss .
+
+	?sourcesOfInformation eg:hasSignsAndSymptoms ?signsAndSymptoms .
+	?signsAndSymptoms eg:hasMinimumMandatorySymptoms ?minimumMandatorySymptoms .
+	?signsAndSymptoms eg:hasMinimumOptionalSymptoms ?minimumOptionalSymptoms .
+
+} 
