@@ -4,7 +4,7 @@ Lucas O. Teixeira
 João Ricardo Vissoci  
 Bruno Melo  
 Ricardo Pietrobon
-Gustavo C. Medeiros
+Gustavo C. Medeiros  
 
 ## Abstract
 
@@ -62,25 +62,30 @@ Two healthcare (RP and GM) researchers selected the four documents containing th
 The ontology development was primarily based on the following informal use case:
 
 1. A template item (exercise) is developed to represent a typical clinical case exercise (Table 1).
-2. This clinical case exercise is stripped of specific symptoms, signs and diagnoses, which are then replaced by fields to be instantiated by an ontology query, ultimately resulting in an item template (Table 1).
+2. This clinical case exercise is stripped of specific symptoms, signs and diagnoses, which are then replaced by fields to be instantiated by an ontology query, ultimately resulting in an item template (Table 2).
 3. The ontology is then designed so that it can meet two requirements:
     * Queries should result in responses that can be used to instantiate the template
     * The ontology accurately represents the diagnostic criteria
 
 Given that we followed an UPON ontology engineering approach, these three steps were cycled until the ontology reached the status described in this manuscript.
 
-Table 1. Clinical case exercise and corresponding template
+Table 1. Major depressive disorder clinical case exercise
 
-> Patient with {{socio-demographic }}
+> John, 42 years, sought medical aid because he things that something is not right. Says that in recent months is feeling down and tearful. Says that he has no desire to do things and everything seems dull. At the start of symptoms the patient thought that it was a healthy related issue: "Doctor, I thought that it was anemia or a thyroid problem, but the exams are all fine". Says that he has no desire to eat and that his clothes are already getting loose. Says that he has insomnia, that he wakes in the middle of the night frequently and even taking a drug that his brother gave him he is not sleeping right. Says that sometimes he has some 'bad ideas' and even think to end his life but when he remembers his children the thoughts disappear. The patient stays crestfallen most part of the appointment and says that he feels guilty for being 'a burden' on his family.
 
-<!-- add one template and one instantiated exercise -->
+The DSM-V criteria for major depressive disorder includes nine symptoms: depressed humor, anhedonia, body weight changes, sleep disorders, psychomotor disorders, guiltness, fatigue, lethargy and suididal ideation. A patient should have at least four out of the nine symptoms, one of them must be depressed humor or anhedonia.
 
-<!-- add DSM-V criteria for depression and RA criteria-->
+Table 2. Major depressive disorder item template
 
+> 
+
+<!-- Ricardo, the item template is the same as the item model? -->
 
 ### Item model
 
 <!-- gustavo to add clinical case -->
+
+<!-- Ricardo, can I use the same above in the item model below? -->
 
 Um paciente do sexo {{gender}}, {{age}} anos de idade, estado civil {{marital_status}}, vem ao consultório com as seguintes queixas:
 
@@ -107,6 +112,16 @@ O diagnóstico mais provável é:
 ### Ontology structure
 
 <!-- Lucas, let's come up with a graphical representation of the ontology in graphviz or something. The JSON-LD serialization can then be represented in a separate file within the github repo.  -->
+
+We develop a ontology to represent the clinical case exercises, called [Semantic Automatic Item Generation Ontology]() (SAIG)<!--Lucas, create purl and describe here -->. Many terms used in SAIG are reused from [Dublin Core](). The CTMA is represented in Figure X. 
+
+<!-- Lucas, create figure of SAIG structure -->
+
+The following example is the major depressive disorder item model modeled in SAIG:
+
+<!--Lucas, create figure of one study representation-->
+
+Finally, SAIG is licensed under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) and it is available under our [SPARQL Endpoint]().
 
 #### Classes
 
