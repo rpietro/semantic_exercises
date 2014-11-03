@@ -21,7 +21,7 @@ In other to improve the diagnosis of mental disorders, the American Psychiatric 
 
 One recent alternative to achieve scalability and mass development of educational exercises is automatic item generation (AIG), defined as the creation of questions (items) using algorithms and automation (Deane, 2003). Among the advantages of AIG are the possibility of quickly delivering exercises in large scale, reducing recall bias, providing prompt feedback, performing quick comparison between subjects and decreasing costs (Gierl et al, 2012). Nonetheless, the applications of AIG are usually limited to simple, non-contextual items, therefore not making it the option of choice for complex or abstract subjects <!-- ref -->. As a consequence, the diagnosis of mental illnesses would be difficult to implement into a vocabulary-fixed database as is typical of AIG (Deane, 2003). As a way to overcome this limitation, researchers in other fields have applied Web Semantics to add context to <!-- example??? + citar-->. Despite the possibility of combining AIG and Web Semantics, to our knowledge no previous research has addressed this possibility.
 
-In face of this gap in the literature, the objective of this article is to develop a framework where semantic web technologies are used to automatically generate highly contextualized exercises (items) in mental health. Specifically, we describe the ontological framework as well as its integration with the widely used Learning Management System [Open edX](http://code.edx.org/).
+In face of this gap in the literature, the objective of this article is to develop a framework where semantic web technologies are used to automatically generate highly contextualized exercises (items) in mental health. Specifically, we describe the ontological framework as well as its integration with the widely used Learning Management System [Open edX](http://code.edx.org/). <!-- We will do the integration in this study? -->
 
      
 
@@ -129,191 +129,10 @@ O diagnóstico mais provável é:
     * rdflib https://pypi.python.org/pypi/rdflib
     * rdflib-jsonld https://pypi.python.org/pypi/rdflib-jsonld
 
-http://dublincore.org/documents/dcq-rdf-xml/
-
-[Use a latex listing to show the ontology below]
-{
-    "@context":
-    {
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "dc": "http://purl.org/dc/elements/1.1/",
-        "dcterms": "http://purl.org/dc/terms/",
-        "foaf": "http://xmlns.com/foaf/0.1/",
-        "ns": "http://diseasesdiagnosis.com/vocab#"
-    },
-    "@graph": 
-    [
-
-
-        {
-            "@id": "ns:C23.550.288",
-            "dc:subject": 
-            {
-                "@id": "dcterms:MESH/C23.550.288",
-                "rdf:value": "C23.550.288",
-                "rdfs:label": "Disease",
-                "@type": "dcterms:MESH"
-            }
-        },
-
-
-        {
-            "@id": "ns:F03.600.300.375",
-            "@type": "ns:C23.550.288",
-            "ns:minimumQuantityOfOptionalSymptoms": 4,
-            "dc:subject": 
-            {
-                "@id": "dcterms:MESH/F03.600.300.375",
-                "rdf:value": "F03.600.300.375",
-                "rdfs:label": "Depressive Disorder, Major",
-                "@type": "dcterms:MESH"
-            },
-            "ns:mandatorySymptoms":
-            [
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:F01.145.126.350",
-                        "rdf:value": "F01.145.126.350",
-                        "rdfs:label": "Depression",
-                        "@type": "dcterms:MESH"
-                    },
-                },
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C23.888.592.604.039",
-                        "rdf:value": "C23.888.592.604.039",
-                        "rdfs:label": "Anhedonia",
-                        "@type": "dcterms:MESH"
-                    },
-                }
-            ],
-            "ns:optionalSymptoms":
-            [
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C23.888.144.243",
-                        "rdf:value": "C23.888.144.243",
-                        "rdfs:label": "Body Weight Changes",
-                        "@type": "dcterms:MESH"
-                    }
-                },
-                {
-                    "@id": "ns:C10.886.425.800.800",
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C10.886.425",
-                        "rdf:value": "C10.886.425",
-                        "rdfs:label": "Dyssomnias",
-                        "@type": "dcterms:MESH"
-                    }
-                },
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C23.888.592.604.882.700",
-                        "rdf:value": "C23.888.592.604.882.700",
-                        "rdfs:label": "Psychomotor Agitation",
-                        "@type": "dcterms:MESH"
-                    }
-                },
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C23.888.369",
-                        "rdf:value": "C23.888.369",
-                        "rdfs:label": "Fatigue",
-                        "@type": "dcterms:MESH"
-                    }
-                },
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C23.888.592.604.444",
-                        "rdf:value": "C23.888.592.604.444",
-                        "rdfs:label": "Lethargy",
-                        "@type": "dcterms:MESH"
-                    },
-                    "descriptions":
-                    [
-                        "descricao 1",
-                        "descricao 2",
-                        "descricao 3",
-                        ...
-                    ]
-                },
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:F01.145.126.980.875.149",
-                        "rdf:value": "F01.145.126.980.875.149",
-                        "rdfs:label": "Suicidal Ideation",
-                        "@type": "dcterms:MESH"
-                    }
-                }
-            ]
-        },
-    ]
-}
-
-
-SPARQL Query:
-
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX ns: <http://diseasesdiagnosis.com/vocab#>
-
-SELECT ?diseaseName
-
-WHERE
-{
-
-    ?patient rdf:type foaf:Person .
-    ?patient foaf:name ?patientName .
-
-    ?patient ns:hasSymptom ?optionalSymptom .
-    ?optionalSymptom dc:subject ?meshOptionalSymptom .
-    ?meshOptionalSymptom rdf:value ?optionalSymptomID .
-    ?meshOptionalSymptom rdfs:label ?optionalSymptomName .
-
-    ?disease rdf:type ?diseaseType .
-    ?diseaseType dc:subject ?meshDiseaseType .
-    ?meshDiseaseType rdf:value "C23.550.288" .
-    ?meshDiseaseType rdfs:label "Disease" .
-
-    ?disease dc:subject ?meshDisease .
-    ?meshDisease rdfs:label ?diseaseName .
-
-    ?disease ns:minimumQuantityOfOptionalSymptoms ?quantityOfOptionalSymptoms .
-
-    ?disease ns:optionalSymptoms ?optionalSymptom .
-    ?optionalSymptom dc:subject ?meshOptionalSymptom .
-    ?meshOptionalSymptom rdf:value ?optionalSymptomID .
-    ?meshOptionalSymptom rdfs:label ?optionalSymptomName .
-
-
-    FILTER NOT EXISTS {
-
 Feedback is composed by the full diagnostic criteria
 
 ### Semantic representation of Clinical Practice Guidelines using JSON-LD
-        ?disease ns:mandatorySymptoms ?mandatorySymptom .
-        ?mandatorySymptom dc:subject ?meshMandatorySymptom .
-        ?meshMandatorySymptom rdf:value ?mandatorySymptomID .
-        ?meshMandatorySymptom rdfs:label ?mandatorySymptomName .
 
-        FILTER NOT EXISTS {
-
-            ?patient ns:hasSymptom ?mandatorySymptom .
-            ?mandatorySymptom dc:subject ?meshMandatorySymptom .
-            ?meshMandatorySymptom rdf:value ?mandatorySymptomID .
-            ?meshMandatorySymptom rdfs:label ?mandatorySymptomName .
 
 <!-- Lucas, here I would add the following:
 
@@ -334,13 +153,7 @@ c. build a PLO (Personalized Learning Ontology) namespace which will add missing
 
 
 #### Demo app
-        }
-    }
 
-}
-
-GROUP BY ?diseaseName ?quantityOfOptionalSymptoms HAVING ( COUNT(?optionalSymptom) >= ?quantityOfOptionalSymptoms )
-ORDER BY COUNT(?optionalSymptom)
 
 ### Application results
 
@@ -362,6 +175,9 @@ Although our study brings a novel approach to the automatic generation of educat
 
 Based on the previously stated limitations, future research should focus on the expansion of our model to clinical treatment and the inclusion of a situations as a way to introduce a more nuanced level of detail to our items. Although this is, to our knowledge, the first report of a semantic automatic generation approach to clinical case exercises, we believe that its inclusion into existing learning management systems such as the [Open edX](http://code.edx.org/) platform will bring advantages to both learners and instructors.
 
+## References
+
+<!-- Lucas, let's add them in bibtex format since that's easy to process through Rmarkdown -->
 
 1. World Health Organization. (WHO 2011a). Global status report on non-communicable diseases 2010. Geneva: WHO.
 2. United Nations Statistic Division. "Growth Rate of GDP and its breakdown - all countries for all years" Available in unstats.un.org/unsd/snaama/dnllist.asp (Accessed September, 2014).
@@ -375,18 +191,9 @@ Based on the previously stated limitations, future research should focus on the 
 Linden WJ, Glas CAW, eds. Elements of Adaptive Testing. New York, NY: Springer 2010;151–65.
 10.- Deane, Paul, and Kathleen Sheehan. "Automatic item generation via frame semantics: Natural language generation of math word problems." annual meeting of the National Council on Measurement in Education, Chicago, IL. 2003.
 
-
 @book{alwan2011global,
   title={Global status report on noncommunicable diseases 2010.},
   author={Alwan, Ala and others},
   year={2011},
   publisher={World Health Organization}
 }
-
-## Discussion
-
-
-## References
-
-<!-- Lucas, let's add them in bibtex format since that's easy to process through Rmarkdown -->
-Based on the previously stated limitations, future research should focus on the expansion of our model to clinical treatment and the inclusion of a situations as a way to introduce a more nuanced level of detail to our items. Although this is, to our knowledge, the first report of a semantic automatic generation approach to clinical case exercises, we believe that its inclusion into existing learning management systems such as the [Open edX](http://code.edx.org/) platform will bring advantages to both learners and instructors.
