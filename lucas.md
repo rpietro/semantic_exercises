@@ -13,7 +13,7 @@ Gustavo C. Medeiros
 
 ## Introduction
 
-According to the World Health Organization (WHO), mental illnesses are currently the greatest source of burden across all countries, responsible for a cost of nearly 2.5 trillion dollars in 2010 (@alwan2011global). This figure represents more than the annual GDP of 206 countries (United Nations, 2012). As a result, institutions such as the NIH have set mental health as one of their top four priorities in 2012 (National Institute of Mental Health- NIMH, 2012). One of the foundations currently used in treating mental disorders <!-- standardize as disorders?? --> is the establishment of clear diagnostic criteria for mental disorders <!-- repeitda-->, reinforced by the recently released Diagnostic and Statistical Manual for Mental Disorders - Fifth Edition (DSM-V) <!-- ref -->. Resulting from a task force within the American Psychiatric Association, the DSM-V attempts to provide diagnostic guidance and "training materials" (American Psychiatric Association - APA - 2014), ultimately improving the accuracy of diagnoses in clinical practice (APA, 2013). Despite its success in establishing consensus regarding specific criteria, the DSM-V's criteria has limitation in capturing contextual factors that almost invariably accompany mental conditions (Paris, 2013; Gintner, 2014). For example, <!-- contexto sociais -->
+According to the World Health Organization (WHO), mental illnesses are currently the greatest source of burden across all countries, responsible for a cost of nearly 2.5 trillion dollars in 2010 (@alwan2011global). This figure represents more than the annual GDP of 206 countries (United Nations, 2012). As a result, institutions such as the NIH have set mental health as one of their top four priorities in 2012 (National Institute of Mental Health- NIMH, 2012). One of the foundations currently used in treating mental disorders <!-- standardize as disorders?? --> is the establishment of clear diagnostic criteria, reinforced by the recently released Diagnostic and Statistical Manual for Mental Disorders - Fifth Edition (DSM-V) <!-- ref -->. Resulting from a task force within the American Psychiatric Association, the DSM-V attempts to provide diagnostic guidance and "training materials" (American Psychiatric Association - APA - 2014), ultimately improving the accuracy of diagnoses in clinical practice (APA, 2013). Despite its success in establishing consensus regarding specific criteria, the DSM-V's criteria has limitation in capturing contextual factors that almost invariably accompany mental conditions (Paris, 2013; Gintner, 2014). For example, <!-- contexto sociais -->
 
 <!-- Despite its success in some fronts, the DSM-V does not capture the complexity mental disorders are complex and their management frequently requires a connection between biological basis, personality functioning, medical conditions, relevant stressors and environmental problems. (NIMH, 2012; Gintner,2014). As a result, developing efficient diagnostic skills in this area goes beyond providing stable criteria and requires the development of high quality educational strategies to avoid a narrow approach that would disregard contextual factors (Paris, 2013; Gintner, 2014). To our knowledge, however, such comprehensive educational approaches are rarely available. -->
 
@@ -23,35 +23,30 @@ One recent alternative to achieve scalability and mass development of educationa
 
 In face of this gap in the literature, the objective of this article is to develop a framework where semantic web technologies are used to automatically generate highly contextualized exercises (items) in mental health. Specifically, we describe the ontological framework as well as its integration with the widely used Learning Management System [Open edX](http://code.edx.org/). <!-- We will do the integration in this study? -->
 
-     
-
-<!-- We chose to use the JSON-LD format for the semantic representation of Clinical Practice Guidelines because it is a very lightweight format, strongly based on JSON and it is as representative as RDF and OWL. Moreover, we adopted the Dublin Core Metadata Standard with Medical Subject Headings controlled vocabulary [Check the possibility of using MEDDRA] in order to standardized our semantic representation allowing others to use it.  -->
 
 ## Methods
 ### Ethics
 
 Since this project does not involve human subjects, the Institutional Review Board of the University of São Paulo deemed it as exempt from review. <!-- ich number -->
 
+<!--
 ### Source of Diagnostic Guidelines
 
 Since this project did not involve subjects and the data also did not refer to participants, it was considered exempt from review on an Institutional Review Board. 
 
-<!-- add dsm v -->
-
+add dsm v -->
 
 
 ### Source of diagnostic criteria
 
-For this article we used the diagnostic criteria for [major depression]() <!-- Lucas, please add --> and [schizophrenia](http://ccpweb.wustl.edu/pdfs/2013_defdes.pdf) as established by the [Fifth Edition of the Diagnostic and Statistical Manual of Mental Disorders (DSM-5)](http://www.dsm5.org/Pages/Default.aspx) 
-
+For this article we used the diagnostic criteria for [major depressive disorder]() <!-- Lucas, please add --> and [schizophrenia](http://ccpweb.wustl.edu/pdfs/2013_defdes.pdf) as established by the [Fifth Edition of the Diagnostic and Statistical Manual of Mental Disorders (DSM-5)](http://www.dsm5.org/Pages/Default.aspx) 
 
 
 ### Ontology engineering methodology
 
+We followed the main principles of [Unified Process for ONtology (UPON)](https://docs.google.com/file/d/0B4Ke-17mTW1_eWZpeUNRa2pUVVE/edit) during the ontology development, with LOT serving as the ontology engineer and RP and GM serving as content experts.
 
-We followed the main principles of [Unified Process for ONtology (UPON)](https://docs.google.com/file/d/0B4Ke-17mTW1_eWZpeUNRa2pUVVE/edit) during the ontology development, with LOT serving as the ontology engineer and RP and GM serving as content experts for, respectively, the musculoskeletal and mental health fields. 
-
-Two healthcare (RP and GM) researchers selected the four documents containing the diagnostic criteria. There was no intention to make these cases to be representative of all conditions. The ontology was then created in conjunction between the ontology engineer (LOT) and the two healthcare researchers. Following the UPON ontology engineering approach, the experts iterated to ensure that the ontology adequately provided an accurate representation of the diagnostic criteria, that its query provided the components necessary to automatically generate itens, and that the two healthcare experts agreed that the items provided an adequate way to assess diagnostic criteria.
+Two healthcare (RP and GM) researchers selected the two <!--four--> documents containing the diagnostic criteria. There was no intention to make these cases to be representative of all conditions. The ontology was then created in conjunction between the ontology engineer (LOT) and the two healthcare researchers. Following the UPON ontology engineering approach, the experts iterated to ensure that the ontology adequately provided an accurate representation of the diagnostic criteria, that its query provided the components necessary to automatically generate itens, and that the two healthcare experts agreed that the items provided an adequate way to assess diagnostic criteria.
 
 <!-- observer agreement -->
 
@@ -61,7 +56,7 @@ Two healthcare (RP and GM) researchers selected the four documents containing th
 
 The ontology development was primarily based on the following informal use case:
 
-1. A template item (exercise) is developed to represent a typical clinical case exercise (Table 1).
+1. A item (exercise) is developed to represent a typical clinical case exercise (Table 1).
 2. This clinical case exercise is stripped of specific symptoms, signs and diagnoses, which are then replaced by fields to be instantiated by an ontology query, ultimately resulting in an item template (Table 2).
 3. The ontology is then designed so that it can meet two requirements:
     * Queries should result in responses that can be used to instantiate the template
@@ -113,7 +108,7 @@ O diagnóstico mais provável é:
 
 <!-- Lucas, let's come up with a graphical representation of the ontology in graphviz or something. The JSON-LD serialization can then be represented in a separate file within the github repo.  -->
 
-We develop a ontology to represent the clinical case exercises, called [Semantic Automatic Item Generation Ontology]() (SAIG)<!--Lucas, create purl and describe here -->. Many terms used in SAIG are reused from [Dublin Core](). The CTMA is represented in Figure X. 
+We develop a ontology to represent the clinical case exercises, called [Semantic Automatic Item Generation Ontology]() (SAIG)<!--Lucas, create purl and describe here -->. The classes and properties present in SAIG are highly based in the Gierl (2012) work. The SAIG is represented in Figure X. 
 
 <!-- Lucas, create figure of SAIG structure -->
 
@@ -125,8 +120,33 @@ Finally, SAIG is licensed under [Apache License, Version 2.0](http://www.apache.
 
 #### Classes
 
+Table X. SAIG Classes
+
+OWL Class | Description
+----------|------------
+ItemModel | 
+ProblemAndScenarios |
+SourcesOfInformation |
+PersonalInformation |
+SignsAndSymptoms |
+MandatorySymptoms |
+OptionalSymptoms |
 
 #### Properties
+
+Table X. SAIG Classes
+
+OWL Properties | Description
+---------------|------------
+hasProblemAreaAndAssociateScenarios |
+hasSourcesOfInformation |
+hasPersonalInformation |
+hasSignsAndSymptoms |
+hasMandatorySymptoms |
+hasMinimumMandatorySymptoms | 
+hasOptionalSymptoms |
+hasMinimumOptionalSymptoms |
+
 
 
 #### Query, inferences and model instantiation
@@ -211,4 +231,11 @@ Linden WJ, Glas CAW, eds. Elements of Adaptive Testing. New York, NY: Springer 2
   author={Alwan, Ala and others},
   year={2011},
   publisher={World Health Organization}
+}
+
+@book{gierl2012automatic,
+  title={Automatic item generation: Theory and practice},
+  author={Gierl, Mark J and Haladyna, Thomas M},
+  year={2012},
+  publisher={Routledge}
 }
