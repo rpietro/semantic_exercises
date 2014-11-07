@@ -56,7 +56,7 @@ Two healthcare (RP and GM) researchers selected the two <!--four--> documents co
 
 The ontology development was primarily based on the following informal use case:
 
-1. A item (exercise) is developed to represent a typical clinical case exercise (Table 1).
+1. A item (exercise) is developed to represent a typical clinical case exercise (Table 1 and 2).
 2. This clinical case exercise is stripped of specific symptoms, signs and diagnoses, which are then replaced by fields to be instantiated by an ontology query, ultimately resulting in an item template.
 3. The ontology is then designed so that it can meet two requirements:
     * Queries should result in responses that can be used to instantiate the template
@@ -68,11 +68,15 @@ The Table 1 shows a typical item about major depressive disorder. The DSM-5 crit
 
 Table 1. Major depressive disorder clinical case exercise
 
-> John, 42 years, sought medical aid because he things that something is not right. Says that in recent months is feeling down and tearful. Says that he has no desire to do things and everything seems dull. At the start of symptoms the patient thought that it was a healthy related issue: "Doctor, I thought that it was anemia or a thyroid problem, but the exams are all fine". Says that he has no desire to eat and that his clothes are already getting loose. Says that he has insomnia, that he wakes in the middle of the night frequently and even taking a drug that his brother gave him he is not sleeping right. Says that sometimes he has some 'bad ideas' and even think to end his life but when he remembers his children the thoughts disappear. The patient stays crestfallen most part of the appointment and says that he feels guilty for being 'a burden' on his family.
+> John, male, 42 years, sought medical aid because he things that something is not right. Says that in recent months is feeling down and tearful. Mentions that he has no desire to do things and everything seems dull. At the start of symptoms the patient thought that it was a healthy related issue: "Doctor, I thought that it was anemia or a thyroid problem, but the exams are all fine". Complains that he has no desire to eat and that his clothes are already getting loose. Reports that he has insomnia, that he wakes in the middle of the night frequently and even taking a drug that his brother gave him he is not sleeping right. States that sometimes he has some 'bad ideas' and even think to end his life but when he remembers his children the thoughts disappear. The patient stays crestfallen most part of the appointment and says that he feels guilty for being 'a burden' on his family.
 
 <!-- Lucas, I will link each description in the item above to the corresponding symptom -->
 
-The item in Table 1 can be stripped into: personal information about the patient, symptoms reported, signs noticed by the doctor and laboratory results. Furthermore, personal information can be stripped into name, age and reason for the visit and symptoms can be stripped into mandatory and optional. We have decided to split symptoms into two groups: mandatory and optional. This was done because often the diagnostic criteria of DSM-5 includes a set of symptoms and requires that subset of these to be present. <!-- Lucas, I will explain better -->
+Table 2. Schizophrenia clinical case exercise
+
+> Mark, male, 21 years, ...
+
+The item in Table 1 and Table 2 can be stripped into: personal information about the patient, symptoms reported, signs noticed by the doctor and laboratory results. Furthermore, personal information can be stripped into name, gender, age and reason for the visit and symptoms can be stripped into mandatory and optional. We have decided to split symptoms into two groups: mandatory and optional. This was done because often the diagnostic criteria of DSM-5 includes a set of symptoms and requires that subset of these to be present. <!-- Lucas, I will explain better -->
 
 
 ### Item model
@@ -119,14 +123,14 @@ Finally, MDAIG is licensed under [Apache License, Version 2.0](http://www.apache
 
 #### Classes
 
-Table X. MDAIG Classes
+Table 1. MDAIG Classes
 
 OWL Class | Description
 ----------|------------
 ItemModel | The ItemModel class represents an item model used to produce different items.
 ProblemAndScenario | The ProblemAndScenario class represents the main subject of the item model. It includes a disease, a disorder, a treatment, etc. The problem is a MeSH term. For example, a problem could be major depressive disorder, schizophrenia, etc.
 SourceOfInformation | The SourceOfInformation class represents any source of information used by an item model. It includes personal information, physical examination done by the doctor, laboratory results and symptoms.
-PersonalInformation | The PersonalInformation class represents any information used to characterize the patient. It includes name, age, reason for the visit and personal thoughts.
+PersonalInformation | The PersonalInformation class represents any information used to characterize the patient. It includes name, gender, age, reason for the visit and personal thoughts. The FOAF vocabulary is used to characterize patients.
 SignAndSymptom | The SignAndSymptom class represents any symptoms reported by the patient or a sign noticed by the doctor. It includes mandatory symptoms and optional symptoms. The signs and symptoms used are MeSH terms. For example, a symptom could be fatigue, anhedonia, depressed humor, delusions, etc.
 PhysicalExamination | The PhysicalExamination class represents represents any physical examination done and its result. For example, physical examination could be blood pressure, heart rate, temperature, respiration rate, etc.
 LaboratoryResult | The LaboratoryResult class represents represents any laboratory exam done and its result. For example, laboratory results could be blood count, urinalysis, cholesterol level, blood glucose sugar, etc.
@@ -135,19 +139,18 @@ OptionalSymptom | The OptionalSymtpom class represents a set of symptoms that a 
 
 #### Properties
 
-Table X. MDAIG Properties
+Table 2. MDAIG Properties
 
 OWL Properties | Description
 ---------------|------------
-hasProblemAreaAndAssociateScenarios | The hasProblemAreaAndAssociateScenarios property represents the main problem of an item model. The domain is ItemModel and the range is ProblemAndScenario.
-hasPersonalInformation | The hasPersonalInformation property represents any information about the patient to be used in an item model. The FOAF vocabulary is used to characterize patients.
-hasPhysicalExamination |
-hasLaboratoryResults |
-hasMandatorySymptoms |
-hasMinimumMandatorySymptoms | 
-hasOptionalSymptoms |
-hasMinimumOptionalSymptoms |
-
+hasProblemAreaAndAssociateScenarios | The hasProblemAreaAndAssociateScenarios property relates an item model to its main problem. The domain is ItemModel and the range is ProblemAndScenario.
+hasPersonalInformation | The hasPersonalInformation property relates an item model to any information used to characterize the patient. The domain is ItemModel and the range is PersonalInformation.
+hasPhysicalExamination |The hasPhysicalExamination property relates an item model to any information about the physical examination done by a doctor. The domain is ItemModel and the range is PhysicalExamination.
+hasLaboratoryResults |The hasLaboratoryResults property relates an item model to any information about the laboratory tests done on the patient. The domain is ItemModel and the range is LaboratoryResults.
+hasMandatorySymptoms |The hasMandatorySymptoms property relates an item model to its mandatory symptoms. The domain is ItemModel and the range is MandatorySymptom.
+hasMinimumMandatorySymptoms | The hasMinimumMandatorySymptoms property relates an item model to the minimum number of mandatory symptoms that must be present in a generated item. The domain is ItemModel and the range is an integer.
+hasOptionalSymptoms |The hasOptionalSymptoms property relates an item model to its optional symptoms. The domain is ItemModel and the range is OptionalSymptom.
+hasMinimumOptionalSymptoms |The hasMinimumMandatorySymptoms property relates an item model to the minimum number of optional symptoms that must be present in a generated item. The domain is ItemModel and the range is an integer.
 
 
 #### Query, inferences and model instantiation
