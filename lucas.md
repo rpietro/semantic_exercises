@@ -108,19 +108,21 @@ O diagnóstico mais provável é:
 
 <!-- Lucas, let's come up with a graphical representation of the ontology in graphviz or something. The JSON-LD serialization can then be represented in a separate file within the github repo.  -->
 
-We develop a ontology to represent the clinical case exercises, called [Semantic Automatic Item Generation Ontology]() (SAIG)<!--Lucas, create purl and describe here -->. The classes and properties present in SAIG are highly based in the Gierl (2012) work. The SAIG is represented in Figure X. 
+We develop a ontology to represent the clinical case exercises, called [Mental Disorders Automatic Item Generation Ontology]() (MDAIG)<!--Lucas, create purl and describe here -->. The classes and properties present in MDAIG are highly based in the Gierl (2012) work. The MDAIG is represented in Figure X. 
 
-<!-- Lucas, create figure of SAIG structure -->
+![Mental Disorders Automatic Item Generation Ontology](https://github.com/rpietro/semantic_exercises/blob/master/mdaig.png)
 
-The following example is the major depressive disorder item model modeled in SAIG:
+<!-- Lucas, will improve figure later-->
 
-<!--Lucas, create figure of one study representation-->
+The following example is the major depressive disorder item model modeled in MDAIG:
 
-Finally, SAIG is licensed under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) and it is available under our [SPARQL Endpoint]().
+<!--Lucas, create figure of one item model representation-->
+
+Finally, MDAIG is licensed under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) and it is available under our [SPARQL Endpoint]().
 
 #### Classes
 
-Table X. SAIG Classes
+Table X. MDAIG Classes
 
 OWL Class | Description
 ----------|------------
@@ -129,12 +131,14 @@ ProblemAndScenarios |
 SourcesOfInformation |
 PersonalInformation |
 SignsAndSymptoms |
+PhysicalExamination |
+LaboratoryResults |
 MandatorySymptoms |
 OptionalSymptoms |
 
 #### Properties
 
-Table X. SAIG Classes
+Table X. MDAIG Classes
 
 OWL Properties | Description
 ---------------|------------
@@ -142,6 +146,8 @@ hasProblemAreaAndAssociateScenarios |
 hasSourcesOfInformation |
 hasPersonalInformation |
 hasSignsAndSymptoms |
+hasPhysicalExamination |
+hasLaboratoryResults |
 hasMandatorySymptoms |
 hasMinimumMandatorySymptoms | 
 hasOptionalSymptoms |
