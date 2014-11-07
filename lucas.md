@@ -57,24 +57,23 @@ Two healthcare (RP and GM) researchers selected the two <!--four--> documents co
 The ontology development was primarily based on the following informal use case:
 
 1. A item (exercise) is developed to represent a typical clinical case exercise (Table 1).
-2. This clinical case exercise is stripped of specific symptoms, signs and diagnoses, which are then replaced by fields to be instantiated by an ontology query, ultimately resulting in an item template (Table 2).
+2. This clinical case exercise is stripped of specific symptoms, signs and diagnoses, which are then replaced by fields to be instantiated by an ontology query, ultimately resulting in an item template.
 3. The ontology is then designed so that it can meet two requirements:
     * Queries should result in responses that can be used to instantiate the template
     * The ontology accurately represents the diagnostic criteria
 
 Given that we followed an UPON ontology engineering approach, these three steps were cycled until the ontology reached the status described in this manuscript.
 
+The Table 1 shows a typical item about major depressive disorder. The DSM-5 criteria for major depressive disorder includes nine symptoms: depressed humor, anhedonia, body weight changes, sleep disorders, psychomotor disorders, guiltiness, fatigue, lethargy and suicidal ideation. A patient should have at least four out of the nine symptoms in order to be diagnosed with major depressive disorder, one of them must be depressed humor or anhedonia.
+
 Table 1. Major depressive disorder clinical case exercise
 
 > John, 42 years, sought medical aid because he things that something is not right. Says that in recent months is feeling down and tearful. Says that he has no desire to do things and everything seems dull. At the start of symptoms the patient thought that it was a healthy related issue: "Doctor, I thought that it was anemia or a thyroid problem, but the exams are all fine". Says that he has no desire to eat and that his clothes are already getting loose. Says that he has insomnia, that he wakes in the middle of the night frequently and even taking a drug that his brother gave him he is not sleeping right. Says that sometimes he has some 'bad ideas' and even think to end his life but when he remembers his children the thoughts disappear. The patient stays crestfallen most part of the appointment and says that he feels guilty for being 'a burden' on his family.
 
-The DSM-V criteria for major depressive disorder includes nine symptoms: depressed humor, anhedonia, body weight changes, sleep disorders, psychomotor disorders, guiltness, fatigue, lethargy and suididal ideation. A patient should have at least four out of the nine symptoms, one of them must be depressed humor or anhedonia.
+<!-- Lucas, I will link each description in the item above to the corresponding symptom -->
 
-Table 2. Major depressive disorder item template
+The item in Table 1 can be stripped into: personal information about the patient, symptoms reported, signs noticed by the doctor and laboratory results. Furthermore, personal information can be stripped into name, age and reason for the visit and symptoms can be stripped into mandatory and optional. We have decided to split symptoms into two groups: mandatory and optional. This was done because often the diagnostic criteria of DSM-5 includes a set of symptoms and requires that subset of these to be present. <!-- Lucas, I will explain better -->
 
-> 
-
-<!-- Ricardo, the item template is the same as the item model? -->
 
 ### Item model
 
@@ -106,17 +105,15 @@ O diagnóstico mais provável é:
 
 ### Ontology structure
 
-<!-- Lucas, let's come up with a graphical representation of the ontology in graphviz or something. The JSON-LD serialization can then be represented in a separate file within the github repo.  -->
+We develop a ontology to represent the clinical case exercises, called [Mental Disorders Automatic Item Generation Ontology]() (MDAIG)<!--Lucas, create purl and describe here -->. The classes and properties present in MDAIG are highly based in the Gierl (2012) work. The MDAIG is represented in Figure 1. 
 
-We develop a ontology to represent the clinical case exercises, called [Mental Disorders Automatic Item Generation Ontology]() (MDAIG)<!--Lucas, create purl and describe here -->. The classes and properties present in MDAIG are highly based in the Gierl (2012) work. The MDAIG is represented in Figure X. 
+Figure 1. MDAIG Structure
 
 ![Mental Disorders Automatic Item Generation Ontology](https://github.com/rpietro/semantic_exercises/blob/master/mdaig.png)
 
 <!-- Lucas, will improve figure later-->
 
-The following example is the major depressive disorder item model modeled in MDAIG:
-
-<!--Lucas, create figure of one item model representation-->
+The following example is the major depressive disorder item model modeled in MDAIG: <!--Lucas, create figure of one item model representation-->
 
 Finally, MDAIG is licensed under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) and it is available under our [SPARQL Endpoint]().
 
@@ -126,26 +123,24 @@ Table X. MDAIG Classes
 
 OWL Class | Description
 ----------|------------
-ItemModel | 
-ProblemAndScenarios |
-SourcesOfInformation |
-PersonalInformation |
-SignsAndSymptoms |
-PhysicalExamination |
-LaboratoryResults |
-MandatorySymptoms |
-OptionalSymptoms |
+ItemModel | The ItemModel class represents an item model used to produce different items.
+ProblemAndScenario | The ProblemAndScenario class represents the main subject of the item model. It includes a disease, a disorder, a treatment, etc. The problem is a MeSH term. For example, a problem could be major depressive disorder, schizophrenia, etc.
+SourceOfInformation | The SourceOfInformation class represents any source of information used by an item model. It includes personal information, physical examination done by the doctor, laboratory results and symptoms.
+PersonalInformation | The PersonalInformation class represents any information used to characterize the patient. It includes name, age, reason for the visit and personal thoughts.
+SignAndSymptom | The SignAndSymptom class represents any symptoms reported by the patient or a sign noticed by the doctor. It includes mandatory symptoms and optional symptoms. The signs and symptoms used are MeSH terms. For example, a symptom could be fatigue, anhedonia, depressed humor, delusions, etc.
+PhysicalExamination | The PhysicalExamination class represents represents any physical examination done and its result. For example, physical examination could be blood pressure, heart rate, temperature, respiration rate, etc.
+LaboratoryResult | The LaboratoryResult class represents represents any laboratory exam done and its result. For example, laboratory results could be blood count, urinalysis, cholesterol level, blood glucose sugar, etc.
+MandatorySymptom | The MandatorySymptom class represents a set of symptoms that a patient must have.
+OptionalSymptom | The OptionalSymtpom class represents a set of symptoms that a patient may have.
 
 #### Properties
 
-Table X. MDAIG Classes
+Table X. MDAIG Properties
 
 OWL Properties | Description
 ---------------|------------
-hasProblemAreaAndAssociateScenarios |
-hasSourcesOfInformation |
-hasPersonalInformation |
-hasSignsAndSymptoms |
+hasProblemAreaAndAssociateScenarios | The hasProblemAreaAndAssociateScenarios property represents the main problem of an item model. The domain is ItemModel and the range is ProblemAndScenario.
+hasPersonalInformation | The hasPersonalInformation property represents any information about the patient to be used in an item model. The FOAF vocabulary is used to characterize patients.
 hasPhysicalExamination |
 hasLaboratoryResults |
 hasMandatorySymptoms |
