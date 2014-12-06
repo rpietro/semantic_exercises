@@ -4,7 +4,7 @@ Lucas O. Teixeira
 João Ricardo Vissoci  
 Bruno Melo  
 Ricardo Pietrobon
-Gustavo C. Medeiros
+Gustavo C. Medeiros  
 
 ## Abstract
 
@@ -13,7 +13,7 @@ Gustavo C. Medeiros
 
 ## Introduction
 
-According to the World Health Organization (WHO), mental illnesses are currently the greatest source of burden across all countries, responsible for a cost of nearly 2.5 trillion dollars in 2010 (@alwan2011global). This figure represents more than the annual GDP of 206 countries (United Nations, 2012). As a result, institutions such as the NIH have set mental health as one of their top four priorities in 2012 (National Institute of Mental Health- NIMH, 2012). One of the foundations currently used in treating mental disorders <!-- standardize as disorders?? --> is the establishment of clear diagnostic criteria for mental disorders <!-- repeitda-->, reinforced by the recently released Diagnostic and Statistical Manual for Mental Disorders - Fifth Edition (DSM-V) <!-- ref -->. Resulting from a task force within the American Psychiatric Association, the DSM-V attempts to provide diagnostic guidance and "training materials" (American Psychiatric Association - APA - 2014), ultimately improving the accuracy of diagnoses in clinical practice (APA, 2013). Despite its success in establishing consensus regarding specific criteria, the DSM-V's criteria has limitation in capturing contextual factors that almost invariably accompany mental conditions (Paris, 2013; Gintner, 2014). For example, <!-- contexto sociais -->
+According to the World Health Organization (WHO), mental illnesses are currently the greatest source of burden across all countries, responsible for a cost of nearly 2.5 trillion dollars in 2010 (@alwan2011global). This figure represents more than the annual GDP of 206 countries (United Nations, 2012). As a result, institutions such as the NIH have set mental health as one of their top four priorities in 2012 (National Institute of Mental Health- NIMH, 2012). One of the foundations currently used in treating mental disorders <!-- standardize as disorders?? --> is the establishment of clear diagnostic criteria, reinforced by the recently released Diagnostic and Statistical Manual for Mental Disorders - Fifth Edition (DSM-V) <!-- ref -->. Resulting from a task force within the American Psychiatric Association, the DSM-V attempts to provide diagnostic guidance and "training materials" (American Psychiatric Association - APA - 2014), ultimately improving the accuracy of diagnoses in clinical practice (APA, 2013). Despite its success in establishing consensus regarding specific criteria, the DSM-V's criteria has limitation in capturing contextual factors that almost invariably accompany mental conditions (Paris, 2013; Gintner, 2014). For example, <!-- contexto sociais -->
 
 <!-- Despite its success in some fronts, the DSM-V does not capture the complexity mental disorders are complex and their management frequently requires a connection between biological basis, personality functioning, medical conditions, relevant stressors and environmental problems. (NIMH, 2012; Gintner,2014). As a result, developing efficient diagnostic skills in this area goes beyond providing stable criteria and requires the development of high quality educational strategies to avoid a narrow approach that would disregard contextual factors (Paris, 2013; Gintner, 2014). To our knowledge, however, such comprehensive educational approaches are rarely available. -->
 
@@ -21,37 +21,32 @@ In other to improve the diagnosis of mental disorders, the American Psychiatric 
 
 One recent alternative to achieve scalability and mass development of educational exercises is automatic item generation (AIG), defined as the creation of questions (items) using algorithms and automation (Deane, 2003). Among the advantages of AIG are the possibility of quickly delivering exercises in large scale, reducing recall bias, providing prompt feedback, performing quick comparison between subjects and decreasing costs (Gierl et al, 2012). Nonetheless, the applications of AIG are usually limited to simple, non-contextual items, therefore not making it the option of choice for complex or abstract subjects <!-- ref -->. As a consequence, the diagnosis of mental illnesses would be difficult to implement into a vocabulary-fixed database as is typical of AIG (Deane, 2003). As a way to overcome this limitation, researchers in other fields have applied Web Semantics to add context to <!-- example??? + citar-->. Despite the possibility of combining AIG and Web Semantics, to our knowledge no previous research has addressed this possibility.
 
-In face of this gap in the literature, the objective of this article is to develop a framework where semantic web technologies are used to automatically generate highly contextualized exercises (items) in mental health. Specifically, we describe the ontological framework as well as its integration with the widely used Learning Management System [Open edX](http://code.edx.org/).
+In face of this gap in the literature, the objective of this article is to develop a framework where semantic web technologies are used to automatically generate highly contextualized exercises (items) in mental health. Specifically, we describe the ontological framework as well as its integration with the widely used Learning Management System [Open edX](http://code.edx.org/). <!-- We will do the integration in this study? -->
 
-     
-
-<!-- We chose to use the JSON-LD format for the semantic representation of Clinical Practice Guidelines because it is a very lightweight format, strongly based on JSON and it is as representative as RDF and OWL. Moreover, we adopted the Dublin Core Metadata Standard with Medical Subject Headings controlled vocabulary [Check the possibility of using MEDDRA] in order to standardized our semantic representation allowing others to use it.  -->
 
 ## Methods
 ### Ethics
 
 Since this project does not involve human subjects, the Institutional Review Board of the University of São Paulo deemed it as exempt from review. <!-- ich number -->
 
+<!--
 ### Source of Diagnostic Guidelines
 
 Since this project did not involve subjects and the data also did not refer to participants, it was considered exempt from review on an Institutional Review Board. 
 
-<!-- add dsm v -->
-
+add dsm v -->
 
 
 ### Source of diagnostic criteria
 
-For this article we used the diagnostic criteria for [major depression]() <!-- Lucas, please add --> and [schizophrenia](http://ccpweb.wustl.edu/pdfs/2013_defdes.pdf) as established by the [Fifth Edition of the Diagnostic and Statistical Manual of Mental Disorders (DSM-5)](http://www.dsm5.org/Pages/Default.aspx) 
-
+For this article we used the diagnostic criteria for [major depressive disorder]() <!-- Lucas, please add --> and [schizophrenia](http://ccpweb.wustl.edu/pdfs/2013_defdes.pdf) as established by the [Fifth Edition of the Diagnostic and Statistical Manual of Mental Disorders (DSM-5)](http://www.dsm5.org/Pages/Default.aspx) 
 
 
 ### Ontology engineering methodology
 
+We followed the main principles of [Unified Process for ONtology (UPON)](https://docs.google.com/file/d/0B4Ke-17mTW1_eWZpeUNRa2pUVVE/edit) during the ontology development, with LOT serving as the ontology engineer and RP and GM serving as content experts.
 
-We followed the main principles of [Unified Process for ONtology (UPON)](https://docs.google.com/file/d/0B4Ke-17mTW1_eWZpeUNRa2pUVVE/edit) during the ontology development, with LOT serving as the ontology engineer and RP and GM serving as content experts for, respectively, the musculoskeletal and mental health fields. 
-
-Two healthcare (RP and GM) researchers selected the four documents containing the diagnostic criteria. There was no intention to make these cases to be representative of all conditions. The ontology was then created in conjunction between the ontology engineer (LOT) and the two healthcare researchers. Following the UPON ontology engineering approach, the experts iterated to ensure that the ontology adequately provided an accurate representation of the diagnostic criteria, that its query provided the components necessary to automatically generate itens, and that the two healthcare experts agreed that the items provided an adequate way to assess diagnostic criteria.
+Two healthcare (RP and GM) researchers selected the two <!--four--> documents containing the diagnostic criteria. There was no intention to make these cases to be representative of all conditions. The ontology was then created in conjunction between the ontology engineer (LOT) and the two healthcare researchers. Following the UPON ontology engineering approach, the experts iterated to ensure that the ontology adequately provided an accurate representation of the diagnostic criteria, that its query provided the components necessary to automatically generate itens, and that the two healthcare experts agreed that the items provided an adequate way to assess diagnostic criteria.
 
 <!-- observer agreement -->
 
@@ -61,26 +56,34 @@ Two healthcare (RP and GM) researchers selected the four documents containing th
 
 The ontology development was primarily based on the following informal use case:
 
-1. A template item (exercise) is developed to represent a typical clinical case exercise (Table 1).
-2. This clinical case exercise is stripped of specific symptoms, signs and diagnoses, which are then replaced by fields to be instantiated by an ontology query, ultimately resulting in an item template (Table 1).
+1. A item (exercise) is developed to represent a typical clinical case exercise (Table 1 and 2).
+2. This clinical case exercise is stripped of specific symptoms, signs and diagnoses, which are then replaced by fields to be instantiated by an ontology query, ultimately resulting in an item template.
 3. The ontology is then designed so that it can meet two requirements:
     * Queries should result in responses that can be used to instantiate the template
     * The ontology accurately represents the diagnostic criteria
 
 Given that we followed an UPON ontology engineering approach, these three steps were cycled until the ontology reached the status described in this manuscript.
 
-Table 1. Clinical case exercise and corresponding template
+The Table 1 shows a typical item about major depressive disorder. The DSM-5 criteria for major depressive disorder includes nine symptoms: depressed humor, anhedonia, body weight changes, sleep disorders, psychomotor disorders, guiltiness, fatigue, lethargy and suicidal ideation. A patient should have at least four out of the nine symptoms in order to be diagnosed with major depressive disorder, one of them must be depressed humor or anhedonia.
 
-> Patient with {{socio-demographic }}
+Table 1. Major depressive disorder clinical case exercise
 
-<!-- add one template and one instantiated exercise -->
+> John, male, 42 years, sought medical aid because he things that something is not right. Says that in recent months is feeling down and tearful. Mentions that he has no desire to do things and everything seems dull. At the start of symptoms the patient thought that it was a healthy related issue: "Doctor, I thought that it was anemia or a thyroid problem, but the exams are all fine". Complains that he has no desire to eat and that his clothes are already getting loose. Reports that he has insomnia, that he wakes in the middle of the night frequently and even taking a drug that his brother gave him he is not sleeping right. States that sometimes he has some 'bad ideas' and even think to end his life but when he remembers his children the thoughts disappear. The patient stays crestfallen most part of the appointment and says that he feels guilty for being 'a burden' on his family.
 
-<!-- add DSM-V criteria for depression and RA criteria-->
+<!-- Lucas, I will link each description in the item above to the corresponding symptom -->
+
+Table 2. Schizophrenia clinical case exercise
+
+> Mark, male, 21 years, ...
+
+The item in Table 1 and Table 2 can be stripped into: personal information about the patient, symptoms reported, signs noticed by the doctor and laboratory results. Furthermore, personal information can be stripped into name, gender, age and reason for the visit and symptoms can be stripped into mandatory and optional. We have decided to split symptoms into two groups: mandatory and optional. This was done because often the diagnostic criteria of DSM-5 includes a set of symptoms and requires that subset of these to be present. <!-- Lucas, I will explain better -->
 
 
 ### Item model
 
 <!-- gustavo to add clinical case -->
+
+<!-- Ricardo, can I use the same above in the item model below? -->
 
 Um paciente do sexo {{gender}}, {{age}} anos de idade, estado civil {{marital_status}}, vem ao consultório com as seguintes queixas:
 
@@ -106,12 +109,48 @@ O diagnóstico mais provável é:
 
 ### Ontology structure
 
-<!-- Lucas, let's come up with a graphical representation of the ontology in graphviz or something. The JSON-LD serialization can then be represented in a separate file within the github repo.  -->
+We develop a ontology to represent the clinical case exercises, called [Mental Disorders Automatic Item Generation Ontology]() (MDAIG)<!--Lucas, create purl and describe here -->. The classes and properties present in MDAIG are highly based in the Gierl (2012) work. The MDAIG is represented in Figure 1. 
+
+Figure 1. MDAIG Structure
+
+![Mental Disorders Automatic Item Generation Ontology](https://github.com/rpietro/semantic_exercises/blob/master/mdaig.png)
+
+<!-- Lucas, will improve figure later-->
+
+The following example is the major depressive disorder item model modeled in MDAIG: <!--Lucas, create figure of one item model representation-->
+
+Finally, MDAIG is licensed under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) and it is available under our [SPARQL Endpoint]().
 
 #### Classes
 
+Table 1. MDAIG Classes
+
+OWL Class | Description
+----------|------------
+ItemModel | The ItemModel class represents an item model used to produce different items.
+ProblemAndScenario | The ProblemAndScenario class represents the main subject of the item model. It includes a disease, a disorder, a treatment, etc. The problem is a MeSH term. For example, a problem could be major depressive disorder, schizophrenia, etc.
+SourceOfInformation | The SourceOfInformation class represents any source of information used by an item model. It includes personal information, physical examination done by the doctor, laboratory results and symptoms.
+PersonalInformation | The PersonalInformation class represents any information used to characterize the patient. It includes name, gender, age, reason for the visit and personal thoughts. The FOAF vocabulary is used to characterize patients.
+SignAndSymptom | The SignAndSymptom class represents any symptoms reported by the patient or a sign noticed by the doctor. It includes mandatory symptoms and optional symptoms. The signs and symptoms used are MeSH terms. For example, a symptom could be fatigue, anhedonia, depressed humor, delusions, etc.
+PhysicalExamination | The PhysicalExamination class represents represents any physical examination done and its result. For example, physical examination could be blood pressure, heart rate, temperature, respiration rate, etc.
+LaboratoryResult | The LaboratoryResult class represents represents any laboratory exam done and its result. For example, laboratory results could be blood count, urinalysis, cholesterol level, blood glucose sugar, etc.
+MandatorySymptom | The MandatorySymptom class represents a set of symptoms that a patient must have.
+OptionalSymptom | The OptionalSymtpom class represents a set of symptoms that a patient may have.
 
 #### Properties
+
+Table 2. MDAIG Properties
+
+OWL Properties | Description
+---------------|------------
+hasProblemAreaAndAssociateScenarios | The hasProblemAreaAndAssociateScenarios property relates an item model to its main problem. The domain is ItemModel and the range is ProblemAndScenario.
+hasPersonalInformation | The hasPersonalInformation property relates an item model to any information used to characterize the patient. The domain is ItemModel and the range is PersonalInformation.
+hasPhysicalExamination |The hasPhysicalExamination property relates an item model to any information about the physical examination done by a doctor. The domain is ItemModel and the range is PhysicalExamination.
+hasLaboratoryResults |The hasLaboratoryResults property relates an item model to any information about the laboratory tests done on the patient. The domain is ItemModel and the range is LaboratoryResults.
+hasMandatorySymptoms |The hasMandatorySymptoms property relates an item model to its mandatory symptoms. The domain is ItemModel and the range is MandatorySymptom.
+hasMinimumMandatorySymptoms | The hasMinimumMandatorySymptoms property relates an item model to the minimum number of mandatory symptoms that must be present in a generated item. The domain is ItemModel and the range is an integer.
+hasOptionalSymptoms |The hasOptionalSymptoms property relates an item model to its optional symptoms. The domain is ItemModel and the range is OptionalSymptom.
+hasMinimumOptionalSymptoms |The hasMinimumMandatorySymptoms property relates an item model to the minimum number of optional symptoms that must be present in a generated item. The domain is ItemModel and the range is an integer.
 
 
 #### Query, inferences and model instantiation
@@ -129,191 +168,10 @@ O diagnóstico mais provável é:
     * rdflib https://pypi.python.org/pypi/rdflib
     * rdflib-jsonld https://pypi.python.org/pypi/rdflib-jsonld
 
-http://dublincore.org/documents/dcq-rdf-xml/
-
-[Use a latex listing to show the ontology below]
-{
-    "@context":
-    {
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "dc": "http://purl.org/dc/elements/1.1/",
-        "dcterms": "http://purl.org/dc/terms/",
-        "foaf": "http://xmlns.com/foaf/0.1/",
-        "ns": "http://diseasesdiagnosis.com/vocab#"
-    },
-    "@graph": 
-    [
-
-
-        {
-            "@id": "ns:C23.550.288",
-            "dc:subject": 
-            {
-                "@id": "dcterms:MESH/C23.550.288",
-                "rdf:value": "C23.550.288",
-                "rdfs:label": "Disease",
-                "@type": "dcterms:MESH"
-            }
-        },
-
-
-        {
-            "@id": "ns:F03.600.300.375",
-            "@type": "ns:C23.550.288",
-            "ns:minimumQuantityOfOptionalSymptoms": 4,
-            "dc:subject": 
-            {
-                "@id": "dcterms:MESH/F03.600.300.375",
-                "rdf:value": "F03.600.300.375",
-                "rdfs:label": "Depressive Disorder, Major",
-                "@type": "dcterms:MESH"
-            },
-            "ns:mandatorySymptoms":
-            [
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:F01.145.126.350",
-                        "rdf:value": "F01.145.126.350",
-                        "rdfs:label": "Depression",
-                        "@type": "dcterms:MESH"
-                    },
-                },
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C23.888.592.604.039",
-                        "rdf:value": "C23.888.592.604.039",
-                        "rdfs:label": "Anhedonia",
-                        "@type": "dcterms:MESH"
-                    },
-                }
-            ],
-            "ns:optionalSymptoms":
-            [
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C23.888.144.243",
-                        "rdf:value": "C23.888.144.243",
-                        "rdfs:label": "Body Weight Changes",
-                        "@type": "dcterms:MESH"
-                    }
-                },
-                {
-                    "@id": "ns:C10.886.425.800.800",
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C10.886.425",
-                        "rdf:value": "C10.886.425",
-                        "rdfs:label": "Dyssomnias",
-                        "@type": "dcterms:MESH"
-                    }
-                },
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C23.888.592.604.882.700",
-                        "rdf:value": "C23.888.592.604.882.700",
-                        "rdfs:label": "Psychomotor Agitation",
-                        "@type": "dcterms:MESH"
-                    }
-                },
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C23.888.369",
-                        "rdf:value": "C23.888.369",
-                        "rdfs:label": "Fatigue",
-                        "@type": "dcterms:MESH"
-                    }
-                },
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:C23.888.592.604.444",
-                        "rdf:value": "C23.888.592.604.444",
-                        "rdfs:label": "Lethargy",
-                        "@type": "dcterms:MESH"
-                    },
-                    "descriptions":
-                    [
-                        "descricao 1",
-                        "descricao 2",
-                        "descricao 3",
-                        ...
-                    ]
-                },
-                {
-                    "dc:subject": 
-                    {
-                        "@id": "ns:F01.145.126.980.875.149",
-                        "rdf:value": "F01.145.126.980.875.149",
-                        "rdfs:label": "Suicidal Ideation",
-                        "@type": "dcterms:MESH"
-                    }
-                }
-            ]
-        },
-    ]
-}
-
-
-SPARQL Query:
-
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX ns: <http://diseasesdiagnosis.com/vocab#>
-
-SELECT ?diseaseName
-
-WHERE
-{
-
-    ?patient rdf:type foaf:Person .
-    ?patient foaf:name ?patientName .
-
-    ?patient ns:hasSymptom ?optionalSymptom .
-    ?optionalSymptom dc:subject ?meshOptionalSymptom .
-    ?meshOptionalSymptom rdf:value ?optionalSymptomID .
-    ?meshOptionalSymptom rdfs:label ?optionalSymptomName .
-
-    ?disease rdf:type ?diseaseType .
-    ?diseaseType dc:subject ?meshDiseaseType .
-    ?meshDiseaseType rdf:value "C23.550.288" .
-    ?meshDiseaseType rdfs:label "Disease" .
-
-    ?disease dc:subject ?meshDisease .
-    ?meshDisease rdfs:label ?diseaseName .
-
-    ?disease ns:minimumQuantityOfOptionalSymptoms ?quantityOfOptionalSymptoms .
-
-    ?disease ns:optionalSymptoms ?optionalSymptom .
-    ?optionalSymptom dc:subject ?meshOptionalSymptom .
-    ?meshOptionalSymptom rdf:value ?optionalSymptomID .
-    ?meshOptionalSymptom rdfs:label ?optionalSymptomName .
-
-
-    FILTER NOT EXISTS {
-
 Feedback is composed by the full diagnostic criteria
 
 ### Semantic representation of Clinical Practice Guidelines using JSON-LD
-        ?disease ns:mandatorySymptoms ?mandatorySymptom .
-        ?mandatorySymptom dc:subject ?meshMandatorySymptom .
-        ?meshMandatorySymptom rdf:value ?mandatorySymptomID .
-        ?meshMandatorySymptom rdfs:label ?mandatorySymptomName .
 
-        FILTER NOT EXISTS {
-
-            ?patient ns:hasSymptom ?mandatorySymptom .
-            ?mandatorySymptom dc:subject ?meshMandatorySymptom .
-            ?meshMandatorySymptom rdf:value ?mandatorySymptomID .
-            ?meshMandatorySymptom rdfs:label ?mandatorySymptomName .
 
 <!-- Lucas, here I would add the following:
 
@@ -334,13 +192,7 @@ c. build a PLO (Personalized Learning Ontology) namespace which will add missing
 
 
 #### Demo app
-        }
-    }
 
-}
-
-GROUP BY ?diseaseName ?quantityOfOptionalSymptoms HAVING ( COUNT(?optionalSymptom) >= ?quantityOfOptionalSymptoms )
-ORDER BY COUNT(?optionalSymptom)
 
 ### Application results
 
@@ -362,6 +214,9 @@ Although our study brings a novel approach to the automatic generation of educat
 
 Based on the previously stated limitations, future research should focus on the expansion of our model to clinical treatment and the inclusion of a situations as a way to introduce a more nuanced level of detail to our items. Although this is, to our knowledge, the first report of a semantic automatic generation approach to clinical case exercises, we believe that its inclusion into existing learning management systems such as the [Open edX](http://code.edx.org/) platform will bring advantages to both learners and instructors.
 
+## References
+
+<!-- Lucas, let's add them in bibtex format since that's easy to process through Rmarkdown -->
 
 1. World Health Organization. (WHO 2011a). Global status report on non-communicable diseases 2010. Geneva: WHO.
 2. United Nations Statistic Division. "Growth Rate of GDP and its breakdown - all countries for all years" Available in unstats.un.org/unsd/snaama/dnllist.asp (Accessed September, 2014).
@@ -375,7 +230,6 @@ Based on the previously stated limitations, future research should focus on the 
 Linden WJ, Glas CAW, eds. Elements of Adaptive Testing. New York, NY: Springer 2010;151–65.
 10.- Deane, Paul, and Kathleen Sheehan. "Automatic item generation via frame semantics: Natural language generation of math word problems." annual meeting of the National Council on Measurement in Education, Chicago, IL. 2003.
 
-
 @book{alwan2011global,
   title={Global status report on noncommunicable diseases 2010.},
   author={Alwan, Ala and others},
@@ -383,10 +237,9 @@ Linden WJ, Glas CAW, eds. Elements of Adaptive Testing. New York, NY: Springer 2
   publisher={World Health Organization}
 }
 
-## Discussion
-
-
-## References
-
-<!-- Lucas, let's add them in bibtex format since that's easy to process through Rmarkdown -->
-Based on the previously stated limitations, future research should focus on the expansion of our model to clinical treatment and the inclusion of a situations as a way to introduce a more nuanced level of detail to our items. Although this is, to our knowledge, the first report of a semantic automatic generation approach to clinical case exercises, we believe that its inclusion into existing learning management systems such as the [Open edX](http://code.edx.org/) platform will bring advantages to both learners and instructors.
+@book{gierl2012automatic,
+  title={Automatic item generation: Theory and practice},
+  author={Gierl, Mark J and Haladyna, Thomas M},
+  year={2012},
+  publisher={Routledge}
+}

@@ -1,0 +1,376 @@
+{
+	"@context":
+	{
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"owl": "http://www.w3.org/2002/07/owl#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"dc": "http://purl.org/dc/elements/1.1/",
+		"dcterms": "http://purl.org/dc/terms/",
+		"foaf": "http://xmlns.com/foaf/0.1/",
+		"eg": "http://semanticautomaticitemgeneration.com/"
+	},
+	"@graph": 
+	[
+
+
+
+
+		{
+			"@id": "http://semanticautomaticitemgeneration.com/",
+			"@type": "owl:Ontology",
+			"rdfs:label": "Automatic Item Generation Ontology",
+			"dc:title": "Automatic Item Generation Ontology",
+			"rdfs:comment": "An ontology for automatic item generation",
+			"dc:description": "An ontology for automatic item generation"
+		},
+
+
+
+
+
+		{
+			"@id": "eg:ItemModel",
+			"@type": "owl:Class"
+		},
+
+		{
+			"@id": "eg:ProblemAndScenario",
+			"@type": "owl:Class"
+		},
+
+		{
+			"@id": "eg:SourceOfInformation",
+			"@type": "owl:Class"
+		},
+
+		{
+			"@id": "eg:PersonalInformation",
+			"@type": "owl:Class",
+			"rdfs:subClassOf": { 
+				"@id": "eg:SourceOfInformation"
+			}
+		},
+
+		{
+			"@id": "eg:SignAndSymptom",
+			"@type": "owl:Class",
+			"rdfs:subClassOf": { 
+				"@id": "eg:SourceOfInformation"
+			}
+		},
+
+		{
+			"@id": "eg:PhysicalExamination",
+			"@type": "owl:Class",
+			"rdfs:subClassOf": { 
+				"@id": "eg:SourceOfInformation"
+			}
+		},
+
+		{
+			"@id": "eg:LaboratoryResult",
+			"@type": "owl:Class",
+			"rdfs:subClassOf": { 
+				"@id": "eg:SourceOfInformation"
+			}
+		},
+
+		{
+			"@id": "eg:MandatorySymptom",
+			"@type": "owl:Class",
+			"rdfs:subClassOf": { 
+				"@id": "eg:SignAndSymptom"
+			}
+		},
+
+		{
+			"@id": "eg:OptionalSymptom",
+			"@type": "owl:Class",
+			"rdfs:subClassOf": { 
+				"@id": "eg:SignAndSymptom"
+			}
+		},
+
+		{
+			"@id": "eg:hasProblemAreaAndAssociateScenarios",
+			"@type": "owl:ObjectProperty",
+			"rdfs:domain": { 
+				"@id": "eg:ItemModel"
+			},
+			"rdfs:range": { 
+				"@id": "eg:ProblemAndScenario"
+			}
+		},
+
+		{
+			"@id": "eg:hasPersonalInformation",
+			"@type": "owl:ObjectProperty",
+			"rdfs:domain": { 
+				"@id": "eg:ItemModel"
+			},
+			"rdfs:range": { 
+				"@id": "eg:PersonalInformation"
+			}
+		},
+
+		{
+			"@id": "eg:hasPhysicalExamination",
+			"@type": "owl:ObjectProperty",
+			"rdfs:domain": { 
+				"@id": "eg:ItemModel"
+			},
+			"rdfs:range": { 
+				"@id": "eg:PhysicalExamination"
+			}
+		},
+
+		{
+			"@id": "eg:LaboratoryResults",
+			"@type": "owl:ObjectProperty",
+			"rdfs:domain": { 
+				"@id": "eg:ItemModel"
+			},
+			"rdfs:range": { 
+				"@id": "eg:LaboratoryResult"
+			}
+		},
+
+		{
+			"@id": "eg:hasMandatorySymptoms",
+			"@type": "owl:ObjectProperty",
+			"rdfs:domain": { 
+				"@id": "eg:ItemModel"
+			},
+			"rdfs:range": { 
+				"@id": "eg:MandatorySymptom"
+			}
+		},
+
+		{
+			"@id": "eg:hasMinimumMandatorySymptoms",
+			"@type": "owl:DatatypeProperty",
+			"rdfs:domain": { 
+				"@id": "eg:ItemModel"
+			},
+			"rdfs:range": { 
+				"@id": "xsd:integer"
+			}
+		},
+
+		{
+			"@id": "eg:hasOptionalSymptoms",
+			"@type": "owl:ObjectProperty",
+			"rdfs:domain": { 
+				"@id": "eg:ItemModel"
+			},
+			"rdfs:range": { 
+				"@id": "eg:OptionalSymptom"
+			}
+		},
+
+		{
+			"@id": "eg:hasMinimumOptionalSymptoms",
+			"@type": "owl:DatatypeProperty",
+			"rdfs:domain": { 
+				"@id": "eg:ItemModel"
+			},
+			"rdfs:range": { 
+				"@id": "xsd:integer"
+			}
+		},
+
+
+
+
+
+		{
+			"@id": "eg:MajorDepressiveDisorderModel",
+			"@type": [
+				"eg:ItemModel",
+				"owl:NamedIndividual"
+			],
+			"eg:hasProblemAreaAndAssociateScenarios": { 
+				"@type": [
+					"eg:ProblemAndScenario"
+				],
+				"dc:subject": {
+					"@id": "eg:F03.600.300.375",
+					"rdf:value": "F03.600.300.375",
+					"rdfs:label": "Depressive Disorder, Major",
+					"@type": "dcterms:MESH"
+				}
+			},
+			"eg:hasPersonalInformation": {
+				"@type": [
+					"eg:PersonalInformation"
+				],
+				"foaf:name": [
+					"Eduardo",
+					"Lucas",
+					"Gustavo",
+					"Ricardo"
+				],
+				"foaf:age": [
+					42,
+					24,
+					31,
+					28
+				],
+				"foaf:status": [
+					"sought medical aid because he things that something is not right",
+					"came to the clinic because he was feeling very weird for no apparent reason"
+				]
+			},
+			"eg:hasMinimumMandatorySymptoms": 1,
+			"eg:hasMinimumOptionalSymptoms": 4,
+			"eg:hasMandatorySymptoms": [
+				{
+					"@type": [
+						"eg:MandatorySymptom"
+					],
+					"dc:subject": {
+						"@id": "eg:F01.145.126.350",
+						"rdf:value": "F01.145.126.350",
+						"rdfs:label": "Depression",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": [
+						"Says that in recent months is feeling down and tearful"
+					]
+				},
+				{
+					"@type": [
+						"eg:MandatorySymptom"
+					],
+					"dc:subject": {
+						"@id": "eg:C23.888.592.604.039",
+						"rdf:value": "C23.888.592.604.039",
+						"rdfs:label": "Anhedonia",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": [
+						"Says that he has no desire to do things and everything seems dull",
+						"The pacient says: 'I don't know how to explain but things are not funny anymore'",
+						"The pacient says: 'Everything is boring and annoys me'"
+					]
+				}
+			],
+			"eg:hasOptionalSymptoms": [
+				{
+					"@type": [
+						"eg:OptionalSymptom"
+					],
+					"dc:subject": {
+						"@id": "eg:C23.888.144.243",
+						"rdf:value": "C23.888.144.243",
+						"rdfs:label": "Body Weight Changes",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": [
+						"The pacient has a significative weight gain without any kind of diet",
+						"The pacient has a significative weight loss without any kind of diet or exercise",
+						"Says that he has no desire to eat and that his clothes are already getting loose",
+						"Says that he cannot stop eating: 'Doctor, I eat all day long but I'm still hungry'"
+					]
+				},
+				{
+					"@type": [
+						"eg:OptionalSymptom"
+					],
+					"dc:subject": {
+						"@id": "eg:C23.888.592.796",
+						"rdf:value": "C23.888.592.796",
+						"rdfs:label": "Sleep Disorders",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": [
+						"Says that he has insomnia, that he wakes in the middle of the night frequently and even taking a drug that his brother gave him he is not sleeping right",
+						"The pacient says that he has insomnia: 'My sleep is horrible, it takes me forever to fall asleep'",
+						"The pacient says that he has insomnia: 'I usually spend my nights reading and watching TV, it has been a while that I can't sleep",
+						"Says that he is very lazy lately: 'If I could I would like to spend my days sleeping all day'"
+					]
+				},
+				{
+					"@type": [
+						"eg:OptionalSymptom"
+					],
+					"dc:subject": {
+						"@id": "eg:C23.888.592.604.882",
+						"rdf:value": "C23.888.592.604.882",
+						"rdfs:label": "Psychomotor Disorders",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": [
+						"The pacient says: 'Doctor, I'm feeling like I'm slow",
+						"Says that he feels like he is in slow motion"
+					]
+				},
+				{
+					"@type": [
+						"eg:OptionalSymptom"
+					],
+					"dc:subject": {
+						"@id": "eg:F01.470.483",
+						"rdf:value": "F01.470.483",
+						"rdfs:label": "Guilt",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": [
+						"The patient stays crestfallen most part of the appointment and says that he feels guilty for being 'a burden' on his family",
+						"The pacient says: 'Even though my family does not complain I feel like I'm just messing up my family'",
+						"The pacient says: 'I seem to be a burden to my children'",
+						"Says that he is old and has no value"
+					]
+				},
+				{
+					"@type": [
+						"eg:OptionalSymptom"
+					],
+					"dc:subject": {
+						"@id": "eg:C23.888.369",
+						"rdf:value": "C23.888.369",
+						"rdfs:label": "Fatigue",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": [
+						"The patient complains that he has no desire to do anything and that he would like to spend the whole day in bed",
+						"The patient says: 'I want to spend my whole day lying down and watching TV'",
+						"Says that he has lack of energy and lack of strength to do regular things"
+					]
+				},
+				{
+					"@type": [
+						"eg:OptionalSymptom"
+					],
+					"dc:subject": {
+						"@id": "eg:C23.888.592.604.444",
+						"rdf:value": "C23.888.592.604.444",
+						"rdfs:label": "Lethargy",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": [
+						"The patient says: 'I feel like I'm a little slow and I often forget things'",
+						"The patient complains that he forgets things easily: 'What was I saying? I don't know doctor but I keep losing my thoughts"
+					]
+				},
+				{
+					"@type": [
+						"eg:OptionalSymptom"
+					],
+					"dc:subject": {
+						"@id": "eg:F01.145.126.980.875.149",
+						"rdf:value": "F01.145.126.980.875.149",
+						"rdfs:label": "Suicidal Ideation",
+						"@type": "dcterms:MESH"
+					},
+					"dc:description": [
+						"Says that sometimes he has 'bad ideas in his mind' and even think to end his life but when he remembers his children the thoughts go away",
+						"The patient says: 'Sometimes I feel that my life is so dull and meaningless that I question myself if my life is really worthy'",
+						"The patient complains that his family do not support him in any way: 'My family is always meddling in my life, I can't stand it anymore, sometimes I think out dying just to end this suffering'"
+					]
+				}
+			]
+		}
+	]
+}
