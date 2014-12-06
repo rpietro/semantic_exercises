@@ -20,7 +20,7 @@ headTail(Fleiss93cont)
 # Generate additional variable with grouping information
 #
 Fleiss93cont$group <- c(1,2,1,1,2)
-
+Fleiss93cont$group
 #
 # Do meta-analysis without grouping information
 #
